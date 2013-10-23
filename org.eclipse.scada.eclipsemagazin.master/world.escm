@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item">
+  <levels name="REGION1">
+    <levels name="SITE1">
+      <levels name="SYS">
+        <components xsi:type="exec:LoadAverage" name="LAVG">
+          <masterOn href="world.esim#//@nodes.0/@masters.0"/>
+          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.0/@drivers.0"/>
+        </components>
+        <levels name="DRV">
+          <levels name="EXEC">
+            <components xsi:type="component:DriverConnectionAnalyzer">
+              <masterOn href="world.esim#//@nodes.0/@masters.0"/>
+              <connection xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.0/@drivers.0"/>
+            </components>
+          </levels>
+        </levels>
+      </levels>
+    </levels>
+    <levels name="SITE2">
+      <levels name="SYS">
+        <components xsi:type="exec:LoadAverage" name="LAVG">
+          <masterOn href="world.esim#//@nodes.1/@masters.0"/>
+          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.1/@drivers.0"/>
+        </components>
+        <levels name="DRV">
+          <levels name="EXEC">
+            <components xsi:type="component:DriverConnectionAnalyzer">
+              <masterOn href="world.esim#//@nodes.1/@masters.0"/>
+              <connection xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.1/@drivers.0"/>
+            </components>
+          </levels>
+        </levels>
+      </levels>
+    </levels>
+  </levels>
+  <configurations xsi:type="component:MarkerConfiguration">
+    <markers name="maintenance.warning"/>
+    <markers name="maintenance.ack"/>
+  </configurations>
+  <infrastructure href="world.esim#/"/>
+  <defaultCustomizationPipeline xsi:type="item:JavaScriptCustomizationPipeline" href="customization/default.icm_js#/"/>
+  <defaultArchiveSelector xsi:type="item:JavaScriptSelector" href="customization/archiveSelector.isel_js#/"/>
+</component:System>
