@@ -19,7 +19,7 @@ public class ProfileWalker extends DirectoryWalker<File> {
 	@Override
 	protected void handleFile(File file, int depth, Collection<File> results)
 			throws IOException {
-		if (file.getName().endsWith(".profile")) {
+		if (file.getName().endsWith(".profile.xml") && file.getAbsolutePath().contains("output")) {
 			results.add(file);
 		}
 	}

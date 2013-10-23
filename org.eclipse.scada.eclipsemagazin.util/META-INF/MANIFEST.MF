@@ -3,4 +3,5 @@ Bundle-Name: Util
 Bundle-SymbolicName: org.eclipse.scada.eclipsemagazin.util
 Bundle-Version: 1.0.0.qualifier
 Export-Package: org.eclipse.scada.eclipsemagazin.util
-Require-Bundle: org.apache.commons.io;bundle-version="2.0.1"
+Require-Bundle: org.apache.commons.io;bundle-version="2.0.1",
+ org.jdom;bundle-version="1.1.1"
