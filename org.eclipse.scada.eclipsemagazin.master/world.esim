@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:world="http://eclipse.org/SCADA/Configuration/World">
-  <nodes xsi:type="infrastructure:SystemNode" hostName="node1">
-    <drivers xsi:type="infrastructure:CommonDriver" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <valueArchives name="hdserver" instanceNumber="2"/>
-    <masters name="master" driver="//@nodes.0/@drivers.0" archiveTo="//@nodes.0/@valueArchives.0">
-      <authoratives>
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_zIpd4DvgEeOFE4knGugBSA">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_zIpd4TvgEeOFE4knGugBSA" hostName="localhost">
+    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_zIpd4jvgEeOFE4knGugBSA" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
+    <drivers xsi:type="infrastructure:ExternalDriver" xmi:id="_bBk2kDvoEeOFE4knGugBSA" name="randomHive" portNumber="2103"/>
+    <masters xmi:id="_zIpd5DvgEeOFE4knGugBSA" name="master" driver="_zIpd4jvgEeOFE4knGugBSA _bBk2kDvoEeOFE4knGugBSA">
+      <authoratives xmi:id="_zIpd5TvgEeOFE4knGugBSA">
         <hierarchy>REGION1</hierarchy>
         <hierarchy>SITE1</hierarchy>
       </authoratives>
     </masters>
   </nodes>
-  <nodes xsi:type="infrastructure:SystemNode" hostName="node2">
-    <drivers xsi:type="infrastructure:CommonDriver" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <valueArchives name="hdserver" instanceNumber="2"/>
-    <masters name="master" driver="//@nodes.1/@drivers.0" archiveTo="//@nodes.1/@valueArchives.0">
-      <authoratives>
-        <hierarchy>REGION1</hierarchy>
-        <hierarchy>SITE2</hierarchy>
-      </authoratives>
-    </masters>
-  </nodes>
-  <options>
-    <monitorPools name="monitors.unsafe" filter="(status=UNSAFE)"/>
-    <monitorPools name="monitors.inactive" filter="(status=INACTIVE)"/>
-    <monitorPools name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
-    <monitorPools name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
-    <monitorPools name="monitors.init" filter="(status=INIT)"/>
-    <monitorPools name="monitors.all" filter="(status=*)"/>
-    <eventPools name="events.all" filter="(eventType=*)" size="10000"/>
-    <defaultUserService xsi:type="infrastructure:SystemPropertyUserService">
-      <users name="admin" password="admin12"/>
-      <users name="interconnect" password="interconnect12"/>
+  <options xmi:id="_zIqE8jvgEeOFE4knGugBSA">
+    <monitorPools xmi:id="_zIqE8zvgEeOFE4knGugBSA" name="monitors.unsafe" filter="(status=UNSAFE)"/>
+    <monitorPools xmi:id="_zIqE9DvgEeOFE4knGugBSA" name="monitors.inactive" filter="(status=INACTIVE)"/>
+    <monitorPools xmi:id="_zIqE9TvgEeOFE4knGugBSA" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
+    <monitorPools xmi:id="_zIqE9jvgEeOFE4knGugBSA" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
+    <monitorPools xmi:id="_zIqE9zvgEeOFE4knGugBSA" name="monitors.init" filter="(status=INIT)"/>
+    <monitorPools xmi:id="_zIqE-DvgEeOFE4knGugBSA" name="monitors.all" filter="(status=*)"/>
+    <eventPools xmi:id="_zIqE-TvgEeOFE4knGugBSA" name="events.all" filter="(eventType=*)" size="10000"/>
+    <defaultUserService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_zIqE-jvgEeOFE4knGugBSA">
+      <users xmi:id="_zIqE-zvgEeOFE4knGugBSA" name="admin" password="admin12"/>
+      <users xmi:id="_zIqE_DvgEeOFE4knGugBSA" name="interconnect" password="interconnect12"/>
     </defaultUserService>
   </options>
   <defaultSecurityConfiguration href="global/global.security#/"/>
   <defaultMasterHandlerPriorities href="platform:/plugin/org.eclipse.scada.configuration.lib/model/defaultPriorities.eswm#_sLVwoN_iEeKP_IG4d7_Nqg"/>
-  <defaultCredentials xsi:type="world:UsernamePasswordCredentials" username="interconnect" password="interconnect12"/>
+  <defaultCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_zIqE_TvgEeOFE4knGugBSA" username="interconnect" password="interconnect12"/>
   <defaultMasterCustomizationProfile href="global/master.customization.profile.xml#/"/>
   <defaultValueArchiveCustomizationProfile href="global/hdserver.customization.profile.xml#/"/>
-  <defaultDriverPassword password="driver12"/>
+  <defaultDriverPassword xmi:id="_zIqE_jvgEeOFE4knGugBSA" password="driver12"/>
 </infrastructure:World>

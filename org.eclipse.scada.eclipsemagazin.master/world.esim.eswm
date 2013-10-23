@@ -1,104 +1,42 @@
 <?xml version="1.0" encoding="ASCII"?>
-<world:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_itvkwDurEeOcM5lHXAq7Ow">
-  <nodes xsi:type="world:ApplicationNode" xmi:id="_itvkwTurEeOcM5lHXAq7Ow" hostName="node1">
-    <endpoints xmi:id="_itvkwjurEeOcM5lHXAq7Ow" portNumber="2401"/>
-    <endpoints xmi:id="_itvkwzurEeOcM5lHXAq7Ow" portNumber="2201"/>
-    <endpoints xmi:id="_itvkxDurEeOcM5lHXAq7Ow" portNumber="2101"/>
-    <endpoints xmi:id="_itvkxTurEeOcM5lHXAq7Ow" portNumber="2302"/>
-    <endpoints xmi:id="_itvkxjurEeOcM5lHXAq7Ow" portNumber="2402"/>
-    <endpoints xmi:id="_itvkxzurEeOcM5lHXAq7Ow" portNumber="2107"/>
-    <applications xsi:type="osgi:DefaultMasterServer" xmi:id="_itvkyDurEeOcM5lHXAq7Ow" name="master">
-      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_itvkyTurEeOcM5lHXAq7Ow" shortDescription="Connection to ourself" name="self" endpoint="_itvkxDurEeOcM5lHXAq7Ow">
-        <credentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_itvkyjurEeOcM5lHXAq7Ow" username="interconnect" password="interconnect12"/>
+<world:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_FgvOgDvsEeOFE4knGugBSA">
+  <nodes xsi:type="world:ApplicationNode" xmi:id="_FgvOgTvsEeOFE4knGugBSA" hostName="localhost">
+    <endpoints xmi:id="_FgvOgjvsEeOFE4knGugBSA" portNumber="2401"/>
+    <endpoints xmi:id="_FgvOgzvsEeOFE4knGugBSA" portNumber="2201"/>
+    <endpoints xmi:id="_FgvOhDvsEeOFE4knGugBSA" portNumber="2101"/>
+    <endpoints xmi:id="_FgvOhTvsEeOFE4knGugBSA" portNumber="2107"/>
+    <endpoints xmi:id="_FgvOhjvsEeOFE4knGugBSA" portNumber="2103"/>
+    <applications xsi:type="osgi:DefaultMasterServer" xmi:id="_FgvOhzvsEeOFE4knGugBSA" name="master">
+      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_FgvOiDvsEeOFE4knGugBSA" shortDescription="Connection to ourself" name="self" endpoint="_FgvOhDvsEeOFE4knGugBSA">
+        <credentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_FgvOiTvsEeOFE4knGugBSA" username="interconnect" password="interconnect12"/>
       </connections>
-      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_itvkyzurEeOcM5lHXAq7Ow" name="exec" endpoint="_itvkxzurEeOcM5lHXAq7Ow">
-        <credentials xsi:type="world:PasswordCredentials" xmi:id="_itvkzDurEeOcM5lHXAq7Ow" password="driver12"/>
+      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_FgvOijvsEeOFE4knGugBSA" name="randomHive" endpoint="_FgvOhjvsEeOFE4knGugBSA"/>
+      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_FgvOizvsEeOFE4knGugBSA" name="exec" endpoint="_FgvOhTvsEeOFE4knGugBSA">
+        <credentials xsi:type="world:PasswordCredentials" xmi:id="_FgvOjDvsEeOFE4knGugBSA" password="driver12"/>
       </connections>
-      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" xmi:id="_itvkzTurEeOcM5lHXAq7Ow" name="master/exporter" endpoints="_itvkwjurEeOcM5lHXAq7Ow"/>
-      <exporter xsi:type="osgi:AlarmsEventsExporter" xmi:id="_itvkzjurEeOcM5lHXAq7Ow" name="master/exporter" endpoints="_itvkwzurEeOcM5lHXAq7Ow"/>
-      <exporter xsi:type="osgi:DataAccessExporter" xmi:id="_itvkzzurEeOcM5lHXAq7Ow" name="master/exporter" endpoints="_itvkxDurEeOcM5lHXAq7Ow"/>
-      <customizationProfile xmi:id="_itvk0DurEeOcM5lHXAq7Ow" name="Local customization profile">
-        <start xmi:id="_itvk0TurEeOcM5lHXAq7Ow" name="org.eclipse.scada.sec.provider.plain.property"/>
-        <property xmi:id="_itvk0jurEeOcM5lHXAq7Ow" key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:|interconnect:interconnect12:"/>
+      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" xmi:id="_FgvOjTvsEeOFE4knGugBSA" name="master/exporter" endpoints="_FgvOgjvsEeOFE4knGugBSA"/>
+      <exporter xsi:type="osgi:AlarmsEventsExporter" xmi:id="_FgvOjjvsEeOFE4knGugBSA" name="master/exporter" endpoints="_FgvOgzvsEeOFE4knGugBSA"/>
+      <exporter xsi:type="osgi:DataAccessExporter" xmi:id="_FgvOjzvsEeOFE4knGugBSA" name="master/exporter" endpoints="_FgvOhDvsEeOFE4knGugBSA"/>
+      <customizationProfile xmi:id="_FgvOkDvsEeOFE4knGugBSA" name="Local customization profile">
+        <start xmi:id="_FgvOkTvsEeOFE4knGugBSA" name="org.eclipse.scada.sec.provider.plain.property"/>
+        <property xmi:id="_FgvOkjvsEeOFE4knGugBSA" key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:|interconnect:interconnect12:"/>
         <includes href="global/master.customization.profile.xml#/"/>
       </customizationProfile>
       <securityConfiguration href="global/global.security#/"/>
-      <monitorPools xmi:id="_itvk0zurEeOcM5lHXAq7Ow" name="monitors.unsafe" filter="(status=UNSAFE)"/>
-      <monitorPools xmi:id="_itvk1DurEeOcM5lHXAq7Ow" name="monitors.inactive" filter="(status=INACTIVE)"/>
-      <monitorPools xmi:id="_itvk1TurEeOcM5lHXAq7Ow" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
-      <monitorPools xmi:id="_itvk1jurEeOcM5lHXAq7Ow" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
-      <monitorPools xmi:id="_itvk1zurEeOcM5lHXAq7Ow" name="monitors.init" filter="(status=INIT)"/>
-      <monitorPools xmi:id="_itvk2DurEeOcM5lHXAq7Ow" name="monitors.all" filter="(status=*)"/>
-      <eventPools xmi:id="_itvk2TurEeOcM5lHXAq7Ow" name="events.all" filter="(eventType=*)" size="10000"/>
+      <monitorPools xmi:id="_FgvOkzvsEeOFE4knGugBSA" name="monitors.unsafe" filter="(status=UNSAFE)"/>
+      <monitorPools xmi:id="_FgvOlDvsEeOFE4knGugBSA" name="monitors.inactive" filter="(status=INACTIVE)"/>
+      <monitorPools xmi:id="_FgvOlTvsEeOFE4knGugBSA" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
+      <monitorPools xmi:id="_FgvOljvsEeOFE4knGugBSA" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
+      <monitorPools xmi:id="_FgvOlzvsEeOFE4knGugBSA" name="monitors.init" filter="(status=INIT)"/>
+      <monitorPools xmi:id="_FgvOmDvsEeOFE4knGugBSA" name="monitors.all" filter="(status=*)"/>
+      <eventPools xmi:id="_FgvOmTvsEeOFE4knGugBSA" name="events.all" filter="(eventType=*)" size="10000"/>
     </applications>
-    <applications xsi:type="osgi:DefaultValueArchiveServer" xmi:id="_itvk2jurEeOcM5lHXAq7Ow" name="hdserver">
-      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_itvk2zurEeOcM5lHXAq7Ow" shortDescription="Connection to master master on node1" name="master.node1" endpoint="_itvkxDurEeOcM5lHXAq7Ow">
-        <credentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_itvk3DurEeOcM5lHXAq7Ow" username="interconnect" password="interconnect12"/>
-      </connections>
-      <exporter xsi:type="osgi:HistoricalDataExporter" xmi:id="_itvk3TurEeOcM5lHXAq7Ow" name="hdserver/exporter" endpoints="_itvkxTurEeOcM5lHXAq7Ow"/>
-      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" xmi:id="_itvk3jurEeOcM5lHXAq7Ow" name="hdserver/exporter" endpoints="_itvkxjurEeOcM5lHXAq7Ow"/>
-      <customizationProfile xmi:id="_itvk3zurEeOcM5lHXAq7Ow" name="Local customization profile">
-        <start xmi:id="_itvk4DurEeOcM5lHXAq7Ow" name="org.eclipse.scada.sec.provider.plain.property"/>
-        <property xmi:id="_itvk4TurEeOcM5lHXAq7Ow" key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:|interconnect:interconnect12:"/>
-        <includes href="global/hdserver.customization.profile.xml#/"/>
-      </customizationProfile>
-      <securityConfiguration href="global/global.security#/"/>
-    </applications>
-    <applications xsi:type="world:ExecDriver" xmi:id="_itvk4jurEeOcM5lHXAq7Ow" name="exec" endpoints="_itvkxzurEeOcM5lHXAq7Ow">
-      <password xmi:id="_itvk4zurEeOcM5lHXAq7Ow" password="driver12"/>
-      <root xmi:id="_itvk5DurEeOcM5lHXAq7Ow"/>
+    <applications xsi:type="world:ExecDriver" xmi:id="_FgvOmjvsEeOFE4knGugBSA" name="exec" endpoints="_FgvOhTvsEeOFE4knGugBSA">
+      <password xmi:id="_FgvOmzvsEeOFE4knGugBSA" password="driver12"/>
+      <root xmi:id="_FgvOnDvsEeOFE4knGugBSA"/>
     </applications>
   </nodes>
-  <nodes xsi:type="world:ApplicationNode" xmi:id="_itvk5TurEeOcM5lHXAq7Ow" hostName="node2">
-    <endpoints xmi:id="_itvk5jurEeOcM5lHXAq7Ow" portNumber="2401"/>
-    <endpoints xmi:id="_itvk5zurEeOcM5lHXAq7Ow" portNumber="2201"/>
-    <endpoints xmi:id="_itvk6DurEeOcM5lHXAq7Ow" portNumber="2101"/>
-    <endpoints xmi:id="_itvk6TurEeOcM5lHXAq7Ow" portNumber="2302"/>
-    <endpoints xmi:id="_itvk6jurEeOcM5lHXAq7Ow" portNumber="2402"/>
-    <endpoints xmi:id="_itvk6zurEeOcM5lHXAq7Ow" portNumber="2107"/>
-    <applications xsi:type="osgi:DefaultMasterServer" xmi:id="_itvk7DurEeOcM5lHXAq7Ow" name="master">
-      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_itvk7TurEeOcM5lHXAq7Ow" shortDescription="Connection to ourself" name="self" endpoint="_itvk6DurEeOcM5lHXAq7Ow">
-        <credentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_itvk7jurEeOcM5lHXAq7Ow" username="interconnect" password="interconnect12"/>
-      </connections>
-      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_itvk7zurEeOcM5lHXAq7Ow" name="exec" endpoint="_itvk6zurEeOcM5lHXAq7Ow">
-        <credentials xsi:type="world:PasswordCredentials" xmi:id="_itvk8DurEeOcM5lHXAq7Ow" password="driver12"/>
-      </connections>
-      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" xmi:id="_itvk8TurEeOcM5lHXAq7Ow" name="master/exporter" endpoints="_itvk5jurEeOcM5lHXAq7Ow"/>
-      <exporter xsi:type="osgi:AlarmsEventsExporter" xmi:id="_itvk8jurEeOcM5lHXAq7Ow" name="master/exporter" endpoints="_itvk5zurEeOcM5lHXAq7Ow"/>
-      <exporter xsi:type="osgi:DataAccessExporter" xmi:id="_itvk8zurEeOcM5lHXAq7Ow" name="master/exporter" endpoints="_itvk6DurEeOcM5lHXAq7Ow"/>
-      <customizationProfile xmi:id="_itvk9DurEeOcM5lHXAq7Ow" name="Local customization profile">
-        <start xmi:id="_itvk9TurEeOcM5lHXAq7Ow" name="org.eclipse.scada.sec.provider.plain.property"/>
-        <property xmi:id="_itvk9jurEeOcM5lHXAq7Ow" key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:|interconnect:interconnect12:"/>
-        <includes href="global/master.customization.profile.xml#/"/>
-      </customizationProfile>
-      <securityConfiguration href="global/global.security#/"/>
-      <monitorPools xmi:id="_itvk9zurEeOcM5lHXAq7Ow" name="monitors.unsafe" filter="(status=UNSAFE)"/>
-      <monitorPools xmi:id="_itvk-DurEeOcM5lHXAq7Ow" name="monitors.inactive" filter="(status=INACTIVE)"/>
-      <monitorPools xmi:id="_itvk-TurEeOcM5lHXAq7Ow" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
-      <monitorPools xmi:id="_itvk-jurEeOcM5lHXAq7Ow" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
-      <monitorPools xmi:id="_itvk-zurEeOcM5lHXAq7Ow" name="monitors.init" filter="(status=INIT)"/>
-      <monitorPools xmi:id="_itvk_DurEeOcM5lHXAq7Ow" name="monitors.all" filter="(status=*)"/>
-      <eventPools xmi:id="_itvk_TurEeOcM5lHXAq7Ow" name="events.all" filter="(eventType=*)" size="10000"/>
-    </applications>
-    <applications xsi:type="osgi:DefaultValueArchiveServer" xmi:id="_itvk_jurEeOcM5lHXAq7Ow" name="hdserver">
-      <connections xsi:type="osgi:DataAccessConnection" xmi:id="_itvk_zurEeOcM5lHXAq7Ow" shortDescription="Connection to master master on node2" name="master.node2" endpoint="_itvk6DurEeOcM5lHXAq7Ow">
-        <credentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_itvlADurEeOcM5lHXAq7Ow" username="interconnect" password="interconnect12"/>
-      </connections>
-      <exporter xsi:type="osgi:HistoricalDataExporter" xmi:id="_itvlATurEeOcM5lHXAq7Ow" name="hdserver/exporter" endpoints="_itvk6TurEeOcM5lHXAq7Ow"/>
-      <exporter xsi:type="osgi:ConfigurationAdministratorExporter" xmi:id="_itvlAjurEeOcM5lHXAq7Ow" name="hdserver/exporter" endpoints="_itvk6jurEeOcM5lHXAq7Ow"/>
-      <customizationProfile xmi:id="_itvlAzurEeOcM5lHXAq7Ow" name="Local customization profile">
-        <start xmi:id="_itvlBDurEeOcM5lHXAq7Ow" name="org.eclipse.scada.sec.provider.plain.property"/>
-        <property xmi:id="_itvlBTurEeOcM5lHXAq7Ow" key="org.eclipse.scada.sec.provider.plain.property.data" value="admin:admin12:|interconnect:interconnect12:"/>
-        <includes href="global/hdserver.customization.profile.xml#/"/>
-      </customizationProfile>
-      <securityConfiguration href="global/global.security#/"/>
-    </applications>
-    <applications xsi:type="world:ExecDriver" xmi:id="_itvlBjurEeOcM5lHXAq7Ow" name="exec" endpoints="_itvk6zurEeOcM5lHXAq7Ow">
-      <password xmi:id="_itvlBzurEeOcM5lHXAq7Ow" password="driver12"/>
-      <root xmi:id="_itvlCDurEeOcM5lHXAq7Ow"/>
-    </applications>
-  </nodes>
-  <options xmi:id="_itvlCTurEeOcM5lHXAq7Ow">
+  <options xmi:id="_FgvOnTvsEeOFE4knGugBSA">
     <masterHandlerPriorities href="platform:/plugin/org.eclipse.scada.configuration.lib/model/defaultPriorities.eswm#_sLVwoN_iEeKP_IG4d7_Nqg"/>
   </options>
 </world:World>

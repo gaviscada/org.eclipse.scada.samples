@@ -1,44 +1,34 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item">
-  <levels name="REGION1">
-    <levels name="SITE1">
-      <levels name="SYS">
-        <components xsi:type="exec:LoadAverage" name="LAVG">
-          <masterOn href="world.esim#//@nodes.0/@masters.0"/>
-          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.0/@drivers.0"/>
+<component:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_FNXY0DvnEeOFE4knGugBSA">
+  <levels xmi:id="_FNXY0TvnEeOFE4knGugBSA" name="REGION1">
+    <levels xmi:id="_FNXY0jvnEeOFE4knGugBSA" name="SITE1">
+      <levels xmi:id="_FNXY0zvnEeOFE4knGugBSA" name="SYS">
+        <components xsi:type="exec:LoadAverage" xmi:id="_FNXY1DvnEeOFE4knGugBSA" name="LAVG">
+          <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
+          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_zIpd4jvgEeOFE4knGugBSA"/>
         </components>
-        <levels name="DRV">
-          <levels name="EXEC">
-            <components xsi:type="component:DriverConnectionAnalyzer">
-              <masterOn href="world.esim#//@nodes.0/@masters.0"/>
-              <connection xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.0/@drivers.0"/>
+        <levels xmi:id="_FNX_4DvnEeOFE4knGugBSA" name="DRV">
+          <levels xmi:id="_FNX_4TvnEeOFE4knGugBSA" name="EXEC">
+            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_FNX_4jvnEeOFE4knGugBSA">
+              <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
+              <connection xsi:type="infrastructure:CommonDriver" href="world.esim#_zIpd4jvgEeOFE4knGugBSA"/>
             </components>
           </levels>
         </levels>
       </levels>
-    </levels>
-    <levels name="SITE2">
-      <levels name="SYS">
-        <components xsi:type="exec:LoadAverage" name="LAVG">
-          <masterOn href="world.esim#//@nodes.1/@masters.0"/>
-          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.1/@drivers.0"/>
+      <levels xmi:id="_VKe80DvnEeOFE4knGugBSA" name="RND">
+        <components xsi:type="component:ExternalValue" xmi:id="_Y3y8EDvnEeOFE4knGugBSA" name="MyRandom" dataType="INT64" sourceName="random">
+          <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
+          <connection xsi:type="infrastructure:ExternalDriver" href="world.esim#_bBk2kDvoEeOFE4knGugBSA"/>
         </components>
-        <levels name="DRV">
-          <levels name="EXEC">
-            <components xsi:type="component:DriverConnectionAnalyzer">
-              <masterOn href="world.esim#//@nodes.1/@masters.0"/>
-              <connection xsi:type="infrastructure:CommonDriver" href="world.esim#//@nodes.1/@drivers.0"/>
-            </components>
-          </levels>
-        </levels>
       </levels>
     </levels>
   </levels>
-  <configurations xsi:type="component:MarkerConfiguration">
-    <markers name="maintenance.warning"/>
-    <markers name="maintenance.ack"/>
+  <configurations xsi:type="component:MarkerConfiguration" xmi:id="_FNX_4zvnEeOFE4knGugBSA">
+    <markers xmi:id="_FNX_5DvnEeOFE4knGugBSA" name="maintenance.warning"/>
+    <markers xmi:id="_FNX_5TvnEeOFE4knGugBSA" name="maintenance.ack"/>
   </configurations>
-  <infrastructure href="world.esim#/"/>
+  <infrastructure href="world.esim#_zIpd4DvgEeOFE4knGugBSA"/>
   <defaultCustomizationPipeline xsi:type="item:JavaScriptCustomizationPipeline" href="customization/default.icm_js#/"/>
   <defaultArchiveSelector xsi:type="item:JavaScriptSelector" href="customization/archiveSelector.isel_js#/"/>
 </component:System>
