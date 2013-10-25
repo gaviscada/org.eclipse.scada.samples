@@ -3,6 +3,8 @@ package org.eclipse.scada.eclipsemagazin.util;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,22 +24,23 @@ public class CreateLaunchConfigs {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String path = "../org.eclipse.scada.eclipsemagazin.master";
+		Path path = Paths.get("..", "org.eclipse.scada.eclipsemagazin.master");
 		new CreateLaunchConfigs().run(path);
 	}
 
-	private void run(String path) throws IOException, JDOMException {
-		List<File> profiles = new ProfileWalker().gather(new File(path));
-		for (File file : profiles) {
+	private void run(Path path) throws IOException, JDOMException {
+		List<Path> profiles = new ProfileWalker().gather(path);
+		for (Path file : profiles) {
 			createLauncher(file, path);
 		}
 	}
 
-	private void createLauncher(File file, String path) throws JDOMException,
+	@SuppressWarnings("unchecked")
+	private void createLauncher(Path file, Path path) throws JDOMException,
 			IOException {
 		StringBuilder ws_bundles = new StringBuilder();
 		StringBuilder target_bundles = new StringBuilder();
-		Document doc = new SAXBuilder().build(file.getAbsolutePath());
+		Document doc = new SAXBuilder().build(file.toAbsolutePath().toFile());
 		for (Element el : (List<Element>) doc.getRootElement().getChildren()) {
 			if (el.getName().equals("start")) {
 				String s = el.getValue();
@@ -81,22 +84,23 @@ public class CreateLaunchConfigs {
 			el.setAttribute("value", target_bundles.toString());
 			doc.getRootElement().getChildren().add(el);
 		}
-		String[] elements = file.getCanonicalPath().split(File.separator);
-		String service = elements[elements.length - 2];
-		String node = elements[elements.length - 3];
-		File lf = new File(file.getParentFile().getCanonicalPath(), service
-				+ " on " + node + ".launch");
+		String service = file.getName(file.getNameCount() - 2).toString();
+		String node = file.getName(file.getNameCount() - 3).toString();
+		Path lf = Paths.get(path.toString(), service + " on " + node
+				+ ".launch");
 
 		String vmargs = "";
-		vmargs += " -Dorg.eclipse.scada.ca.file.provisionJsonUrl=file://"
-				+ file.getParentFile().getCanonicalPath() + File.separator
-				+ "data.json";
+		vmargs += " -Dorg.eclipse.scada.ca.file.provisionJsonUrl="
+				+ Paths.get(file.getParent().toAbsolutePath().toString(),
+						"data.json").toUri();
 		vmargs += " -Dorg.eclipse.scada.ca.file.root="
-				+ new File(path).getCanonicalPath() + File.separator
+				+ new File(path.toString()).getCanonicalPath() + File.separator
 				+ "_config";
 		vmargs += " -Dlogback.configurationFile="
-				+ new File(path).getCanonicalPath() + File.separator
+				+ new File(path.toString()).getCanonicalPath() + File.separator
 				+ "logback.xml";
+		vmargs += " -Dorg.eclipse.scada.sec.provider.plain.property.data="
+				+ "admin:admin12:|interconnect:interconnect12:";
 		for (Element el : (List<Element>) doc.getRootElement().getChildren()) {
 			if (el.getName().equals("stringAttribute")
 					&& "org.eclipse.jdt.launching.VM_ARGUMENTS".equals(el
@@ -104,6 +108,6 @@ public class CreateLaunchConfigs {
 				el.setAttribute("value", el.getAttributeValue("value") + vmargs);
 			}
 		}
-		new XMLOutputter().output(doc, new FileWriter(lf));
+		new XMLOutputter().output(doc, new FileWriter(lf.toFile()));
 	}
 }
