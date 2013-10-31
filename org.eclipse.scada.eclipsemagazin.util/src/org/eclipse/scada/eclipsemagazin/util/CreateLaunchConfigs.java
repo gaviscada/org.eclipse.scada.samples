@@ -57,6 +57,17 @@ public class CreateLaunchConfigs {
 			target_bundles.append(s);
 			target_bundles.append("@default:default,");
 		}
+		String vmargs = "";
+		for (Element el : (List<Element>) doc.getRootElement().getChildren()) {
+			if (el.getName().equals("property")) {
+				String key = el.getAttributeValue("key");
+				String value = el.getContent(0).getValue();
+				if (key.contains("exportUri")) {
+					vmargs += " -D" + key + "=" + value;
+				}
+			}
+		}
+
 		doc = new SAXBuilder().build("Template.launch");
 		boolean ws_found = false;
 		boolean t_found = false;
@@ -89,7 +100,6 @@ public class CreateLaunchConfigs {
 		Path lf = Paths.get(path.toString(), service + " on " + node
 				+ ".launch");
 
-		String vmargs = "";
 		vmargs += " -Dorg.eclipse.scada.ca.file.provisionJsonUrl="
 				+ Paths.get(file.getParent().toAbsolutePath().toString(),
 						"data.json").toUri();
