@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_FNXY0DvnEeOFE4knGugBSA">
+<component:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_FNXY0DvnEeOFE4knGugBSA">
   <levels xmi:id="_FNXY0TvnEeOFE4knGugBSA" name="REGION1">
     <levels xmi:id="_FNXY0jvnEeOFE4knGugBSA" name="SITE1">
-      <levels xmi:id="_FNXY0zvnEeOFE4knGugBSA" name="SYS">
-        <components xsi:type="exec:LoadAverage" xmi:id="_FNXY1DvnEeOFE4knGugBSA" name="LAVG">
-          <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
-          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_zIpd4jvgEeOFE4knGugBSA"/>
-        </components>
-        <levels xmi:id="_FNX_4DvnEeOFE4knGugBSA" name="DRV">
-          <levels xmi:id="_FNX_4TvnEeOFE4knGugBSA" name="EXEC">
-            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_FNX_4jvnEeOFE4knGugBSA">
-              <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
-              <connection xsi:type="infrastructure:CommonDriver" href="world.esim#_zIpd4jvgEeOFE4knGugBSA"/>
-            </components>
-          </levels>
-        </levels>
-      </levels>
-      <levels xmi:id="_VKe80DvnEeOFE4knGugBSA" name="RND">
-        <components xsi:type="component:ExternalValue" xmi:id="_Y3y8EDvnEeOFE4knGugBSA" name="MyRandom" dataType="INT64" sourceName="random">
-          <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
-          <connection xsi:type="infrastructure:ExternalDriver" href="world.esim#_bBk2kDvoEeOFE4knGugBSA"/>
-        </components>
-      </levels>
+      <components xsi:type="component:ExternalValue" xmi:id="_kfNEADyrEeO7IajceKvz8w" name="MyRandomItem" dataType="INT64" sourceName="random">
+        <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
+        <customizationTags>input</customizationTags>
+        <connection xsi:type="infrastructure:ExternalDriver" href="world.esim#_dZ4nIDyrEeO7IajceKvz8w"/>
+      </components>
     </levels>
   </levels>
   <configurations xsi:type="component:MarkerConfiguration" xmi:id="_FNX_4zvnEeOFE4knGugBSA">
