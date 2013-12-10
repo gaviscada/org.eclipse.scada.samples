@@ -125,7 +125,7 @@ public class CreateLaunchConfigs
                         "data.json" ).toUri ();
         vmargs += " -Dorg.eclipse.scada.ca.file.root="
                 + new File ( path.toString () ).getCanonicalPath () + File.separator
-                + "_config";
+                + "_config_" + service;
         vmargs += " -Dlogback.configurationFile="
                 + new File ( path.toString () ).getCanonicalPath () + File.separator
                 + "logback.xml";
