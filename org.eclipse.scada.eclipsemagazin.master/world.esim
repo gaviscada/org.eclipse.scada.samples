@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_zIpd4DvgEeOFE4knGugBSA">
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_zIpd4DvgEeOFE4knGugBSA">
   <nodes xsi:type="infrastructure:SystemNode" xmi:id="_zIpd4TvgEeOFE4knGugBSA" hostName="localhost">
     <drivers xsi:type="infrastructure:ExternalDriver" xmi:id="_dZ4nIDyrEeO7IajceKvz8w" name="randomHive" portNumber="2103"/>
+    <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_zh4hcFuWEeOSLswnE-MrHw" name="modbus" driverTypeId="org.eclipse.scada.da.server.modbus" devices="_7tt3QFuSEeOSLswnE-MrHw" instanceNumber="4"/>
     <masters xmi:id="_zIpd5DvgEeOFE4knGugBSA" name="master" driver="_dZ4nIDyrEeO7IajceKvz8w">
       <authoratives xmi:id="_zIpd5TvgEeOFE4knGugBSA">
         <hierarchy>REGION1</hierarchy>
         <hierarchy>SITE1</hierarchy>
       </authoratives>
     </masters>
+  </nodes>
+  <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_AxPIQGHlEeOTcK909Y0pOw" name="localhost" hostName="localhost">
+    <devices xsi:type="modbus:ModbusDevice" xmi:id="_7tt3QFuSEeOSLswnE-MrHw" shortDescription="" name="M1" port="502">
+      <slaves xmi:id="__GJLoFuSEeOSLswnE-MrHw" unitAddress="1" id="S1">
+        <blocks xmi:id="_FDhwEFuTEeOSLswnE-MrHw" id="B1" blockType="HOLDING" startAddress="13" count="6" period="250" timeout="10000">
+          <type href="modbus.mtd#T1"/>
+        </blocks>
+      </slaves>
+      <typeSystem href="modbus.mtd#ModbusTypes"/>
+    </devices>
   </nodes>
   <options xmi:id="_zIqE8jvgEeOFE4knGugBSA">
     <monitorPools xmi:id="_zIqE8zvgEeOFE4knGugBSA" name="monitors.unsafe" filter="(status=UNSAFE)"/>
@@ -28,4 +39,5 @@
   <defaultMasterCustomizationProfile href="global/master.customization.profile.xml#/"/>
   <defaultValueArchiveCustomizationProfile href="global/hdserver.customization.profile.xml#/"/>
   <defaultDriverPassword xmi:id="_zIqE_jvgEeOFE4knGugBSA" password="driver12"/>
+  <configurations xmi:id="_WfNtEGHkEeOTcK909Y0pOw"/>
 </infrastructure:World>
