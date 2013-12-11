@@ -31,7 +31,11 @@
     <monitorPools xmi:id="_zIqE-DvgEeOFE4knGugBSA" name="monitors.all" filter="(status=*)"/>
     <eventPools xmi:id="_zIqE-TvgEeOFE4knGugBSA" name="events.all" filter="(eventType=*)" size="10000"/>
     <defaultUserService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_zIqE-jvgEeOFE4knGugBSA">
-      <users xmi:id="_zIqE-zvgEeOFE4knGugBSA" name="admin" password="admin12"/>
+      <users xmi:id="_zIqE-zvgEeOFE4knGugBSA" name="admin" password="admin12">
+        <roles>operator</roles>
+        <roles>admin</roles>
+        <roles>developer</roles>
+      </users>
       <users xmi:id="_zIqE_DvgEeOFE4knGugBSA" name="interconnect" password="interconnect12"/>
     </defaultUserService>
   </options>
