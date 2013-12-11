@@ -7,6 +7,16 @@
         <customizationTags>input</customizationTags>
         <connection xsi:type="infrastructure:ExternalDriver" href="world.esim#_dZ4nIDyrEeO7IajceKvz8w"/>
       </components>
+      <components xsi:type="component:ExternalValue" xmi:id="_DzJGIGH9EeOTcK909Y0pOw" name="MyModbusValue1" dataType="INT32" sourceName="modbus.data.S1.B1.myValue1">
+        <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
+        <customizationTags>output</customizationTags>
+        <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_zh4hcFuWEeOSLswnE-MrHw"/>
+      </components>
+      <components xsi:type="component:ExternalValue" xmi:id="_D7iNIGH9EeOTcK909Y0pOw" name="MyModbusValue2" dataType="INT32" sourceName="modbus.data.S1.B1.myValue2">
+        <masterOn href="world.esim#_zIpd5DvgEeOFE4knGugBSA"/>
+        <customizationTags>output</customizationTags>
+        <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_zh4hcFuWEeOSLswnE-MrHw"/>
+      </components>
     </levels>
   </levels>
   <configurations xsi:type="component:MarkerConfiguration" xmi:id="_FNX_4zvnEeOFE4knGugBSA">

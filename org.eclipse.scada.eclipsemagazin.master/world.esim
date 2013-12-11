@@ -2,8 +2,10 @@
 <infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_zIpd4DvgEeOFE4knGugBSA">
   <nodes xsi:type="infrastructure:SystemNode" xmi:id="_zIpd4TvgEeOFE4knGugBSA" hostName="localhost">
     <drivers xsi:type="infrastructure:ExternalDriver" xmi:id="_dZ4nIDyrEeO7IajceKvz8w" name="randomHive" portNumber="2103"/>
-    <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_zh4hcFuWEeOSLswnE-MrHw" name="modbus" driverTypeId="org.eclipse.scada.da.server.modbus" devices="_7tt3QFuSEeOSLswnE-MrHw" instanceNumber="4"/>
-    <masters xmi:id="_zIpd5DvgEeOFE4knGugBSA" name="master" driver="_dZ4nIDyrEeO7IajceKvz8w">
+    <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_zh4hcFuWEeOSLswnE-MrHw" name="modbus" driverTypeId="org.eclipse.scada.da.server.modbus" devices="_7tt3QFuSEeOSLswnE-MrHw" instanceNumber="4">
+      <accessCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_GNsAgGH-EeOTcK909Y0pOw" username="admin" password="admin12"/>
+    </drivers>
+    <masters xmi:id="_zIpd5DvgEeOFE4knGugBSA" name="master" driver="_dZ4nIDyrEeO7IajceKvz8w _zh4hcFuWEeOSLswnE-MrHw">
       <authoratives xmi:id="_zIpd5TvgEeOFE4knGugBSA">
         <hierarchy>REGION1</hierarchy>
         <hierarchy>SITE1</hierarchy>
