@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface" backgroundColor="#FFFFFF">
+  <root xsi:type="visualInterface:XYContainer">
+    <children>
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/example.vi">
+        <properties key="title" value="All Values"/>
+        <properties key="prefix" value="REGION1.SITE1"/>
+        <properties key="detailsId" value="org.eclipse.scada.eclipsemagazin.hmi.detailview.example"/>
+      </element>
+      <position x="10.0" y="10.0"/>
+      <dimension width="300.0" height="-1.0"/>
+    </children>
+  </root>
+  <properties key="connection" value="connection.da.main"/>
+</visualInterface:Symbol>

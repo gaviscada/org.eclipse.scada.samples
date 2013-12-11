@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<detailView:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:detailView="http://eclipse.org/SCADA/DetailView/1.0">
+  <headerComponent xsi:type="detailView:TextComponent" format="Summary" descriptor="$connection$#$sumItem$"/>
+  <groups label="Overview">
+    <component xsi:type="detailView:GroupGridComponent" cols="1">
+      <groups label="Random Hive">
+        <components xsi:type="detailView:TextComponent" width="200" format="Random value" descriptor="$connection$#$prefix$.MyRandomItem.V"/>
+      </groups>
+      <groups label="Modbus Hive">
+        <components xsi:type="detailView:TextInputComponent" width="200" decimal="0" format="My Value 1" descriptor="$connection$#$prefix$.MyModbusValue1.S" readDescriptor="$connection$#$prefix$.MyModbusValue1.S"/>
+        <components xsi:type="detailView:TextInputComponent" width="200" decimal="0" format="My Value 2" descriptor="$connection$#$prefix$.MyModbusValue2.S" readDescriptor="$connection$#$prefix$.MyModbusValue2.S"/>
+      </groups>
+    </component>
+  </groups>
+</detailView:View>

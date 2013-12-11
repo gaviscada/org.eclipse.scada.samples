@@ -1,0 +1,18 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.scada.eclipsemagazin.hmi;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-Vendor: Eclipse SCADA Project
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.expressions,
+ org.eclipse.scada.core.ui.connection.login;bundle-version="0.1.0",
+ org.eclipse.scada.ae.ui.connection.creator.ngp;bundle-version="0.1.0",
+ org.eclipse.scada.da.ui.connection.creator.ngp;bundle-version="0.1.0",
+ org.eclipse.scada.hd.ui.connection.creator.ngp;bundle-version="0.1.0",
+ org.eclipse.scada.ca.ui.connection.creator.ngp;bundle-version="0.1.0",
+ org.eclipse.scada.ae.ui.views,
+ org.eclipse.scada.vi.details;bundle-version="0.1.0",
+ org.eclipse.scada.vi.details.swt;bundle-version="0.1.0",
+ org.eclipse.scada.vi.ui.user;bundle-version="0.1.0",
+ org.eclipse.scada.vi.ui.viewer.ext;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Name: Eclipse SCADA Samples: Eclipse Magazin Article 01/2014 (Incubation)
