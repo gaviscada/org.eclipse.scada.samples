@@ -1,0 +1,55 @@
+importPackage(org.eclipse.scada.configuration.lib);
+
+if ( ( request.isAnalog () || request.isStringType () ) && request.hasTag ( "input" ) ) {
+
+	if ( request.isComponentClass ( "LoadAverage" ) ) {
+		request.addFeature ( DefaultFeatures.MIN(0) );
+	}
+	
+	if ( request.isComponentClass ( "SystemInformationVMStat" ) ) {
+		if ( request.isLocalTags ( [ "CPU", "USER" ] ) ||
+				request.isLocalTags ( [ "CPU", "SYS" ] ) ||
+				request.isLocalTags ( [ "CPU", "IDLE" ] ) ||
+				request.isLocalTags ( [ "CPU", "WAIT" ] )
+				) {
+			request.addFeature ( DefaultFeatures.MIN(0) );
+			request.addFeature ( DefaultFeatures.MAX(100) );
+		}
+	}
+	
+	// we grant all analog inputs level monitors for the demo system
+	request.addFeature ( DefaultFeatures.HH(null) );
+	request.addFeature ( DefaultFeatures.H(null) );
+	request.addFeature ( DefaultFeatures.L(null) );
+	request.addFeature ( DefaultFeatures.LL(null) );
+	
+	// all analogs inputs may be scaled and rounded
+	request.addFeature ( DefaultFeatures.SCALE(null, null) );
+	request.addFeature ( DefaultFeatures.ROUND(null) );
+	
+	// all analog inputs end with "V = value"
+	request.getLocalTags().add ( "V" );
+
+} else if ( request.isDigital () && request.hasTag ( "input" ) )
+	request.getLocalTags().add ( "M" );
+
+else if ( request.isDigital () && request.hasTag ( "command" ) )
+	request.getLocalTags().add ( "C" );
+
+else if ( request.hasTag ( "summary" ) ) {
+	request.getLocalTags().removeLast ();
+	request.getLocalTags().add ( "SUM" );
+	request.getLocalTags().add ( "V" );
+	
+} else
+	request.getLocalTags().add ( "X" );
+
+// Always add a manual override for inputs
+
+if ( request.hasTag ( "input" ) ) {
+	request.addFeature ( DefaultFeatures.MANUAL_OVERRIDE(null) );
+}
+
+// Always add the Attributes Summary
+
+request.addFeature ( DefaultFeatures.ASUM() );

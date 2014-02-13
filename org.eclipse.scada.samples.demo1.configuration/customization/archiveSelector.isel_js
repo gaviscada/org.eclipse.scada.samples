@@ -1,0 +1,10 @@
+function select () {
+	if ( request.isComponentClass ( "LoadAverage" ) ) {
+		return true;
+	}
+	if ( request.isComponentClass ( "SystemInformationVMStat" ) ) {
+		return true;
+	}
+}
+
+select (); // use return value
