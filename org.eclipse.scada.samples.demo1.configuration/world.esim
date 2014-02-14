@@ -6,6 +6,8 @@
         <author href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       </changes>
       <maintainer href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
+      <additionalDependencies>org.openscada.p2.repo.main >= 1.2.0</additionalDependencies>
+      <additionalDependencies>postgresql-server</additionalDependencies>
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_xeJp45STEeOI_-YITJ2PnA" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <valueArchives xmi:id="_xeJp5JSTEeOI_-YITJ2PnA" name="hdserver" instanceNumber="2"/>
@@ -25,7 +27,7 @@
     </deployment>
     <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_qyDEoJSbEeOI_-YITJ2PnA" name="arduino" driverTypeId="org.eclipse.scada.da.server.arduino" devices="_UUt78JSbEeOI_-YITJ2PnA" instanceNumber="8">
       <userService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_0a0VsJSbEeOI_-YITJ2PnA">
-        <users xmi:id="_00eL0JSbEeOI_-YITJ2PnA" name="drvier" password="drvier12"/>
+        <users xmi:id="_00eL0JSbEeOI_-YITJ2PnA" name="driver" password="driver12"/>
       </userService>
       <accessCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_3POXAJSbEeOI_-YITJ2PnA" username="driver" password="driver12"/>
     </drivers>
@@ -50,6 +52,7 @@
       <users xmi:id="_xeKQ8ZSTEeOI_-YITJ2PnA" name="interconnect" password="interconnect12">
         <roles>INTERLINK</roles>
       </users>
+      <users xmi:id="_3PzDEJV9EeOM9d9xIEME_A" name="guest" password="guest12"/>
     </defaultUserService>
   </options>
   <defaultSecurityConfiguration href="global/global.security#/"/>
