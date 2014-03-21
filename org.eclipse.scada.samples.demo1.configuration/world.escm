@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
   <levels xmi:id="_1Nc3EJScEeOI_-YITJ2PnA" name="ES">
     <levels xmi:id="_2QfocJScEeOI_-YITJ2PnA" name="DEMO">
-      <levels xmi:id="_4-xzoJScEeOI_-YITJ2PnA" name="SRV001">
-        <components xsi:type="exec:LoadAverage" xmi:id="_xYQdRJSTEeOI_-YITJ2PnA" name="LAVG">
-          <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
-          <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_xeJp45STEeOI_-YITJ2PnA"/>
-        </components>
-        <levels xmi:id="_9dgowJScEeOI_-YITJ2PnA" name="DRV">
-          <levels xmi:id="_xYQdRpSTEeOI_-YITJ2PnA" name="EXEC">
-            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_xYQdR5STEeOI_-YITJ2PnA">
-              <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
-              <driver xsi:type="infrastructure:CommonDriver" href="world.esim#_xeJp45STEeOI_-YITJ2PnA"/>
-            </components>
-          </levels>
-          <levels xmi:id="__iuo0JScEeOI_-YITJ2PnA" name="ARDUINO">
-            <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_DYZS0JSdEeOI_-YITJ2PnA">
-              <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
-              <driver xsi:type="infrastructure:EquinoxDriver" href="world.esim#_qyDEoJSbEeOI_-YITJ2PnA"/>
-            </components>
-          </levels>
-        </levels>
-      </levels>
       <levels xmi:id="_PX7m8JSdEeOI_-YITJ2PnA" name="ARDUINO001">
         <components xsi:type="component:ExternalValue" xmi:id="_T0fR0JSdEeOI_-YITJ2PnA" name="LUX" dataType="FLOAT" sourceName="A1.data.lux">
           <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
           <customizationTags>input</customizationTags>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_qyDEoJSbEeOI_-YITJ2PnA"/>
         </components>
+      </levels>
+      <levels xmi:id="_a4cRILBGEeOLC_l15SqcDQ" name="SYS">
+        <components xsi:type="common:CurrentTimeComponent" xmi:id="_bvGzYLBGEeOLC_l15SqcDQ" shortDescription="The local time" dateFormat="yyy-MM-dd HH:mm:ss">
+          <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+          <name>TIME</name>
+        </components>
+        <levels xmi:id="_4-xzoJScEeOI_-YITJ2PnA" name="SRV001">
+          <components xsi:type="exec:LoadAverage" xmi:id="_xYQdRJSTEeOI_-YITJ2PnA" name="LAVG">
+            <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_xeJp45STEeOI_-YITJ2PnA"/>
+          </components>
+          <components xsi:type="exec:SystemInformationVMStat" xmi:id="_IEEyMLBREeO3A_TuHwKNKQ" name="VMSTAT">
+            <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_xeJp45STEeOI_-YITJ2PnA"/>
+          </components>
+          <levels xmi:id="_9dgowJScEeOI_-YITJ2PnA" name="DRV">
+            <levels xmi:id="_xYQdRpSTEeOI_-YITJ2PnA" name="EXEC">
+              <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_xYQdR5STEeOI_-YITJ2PnA">
+                <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+                <driver xsi:type="infrastructure:CommonDriver" href="world.esim#_xeJp45STEeOI_-YITJ2PnA"/>
+              </components>
+            </levels>
+            <levels xmi:id="__iuo0JScEeOI_-YITJ2PnA" name="ARDUINO">
+              <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_DYZS0JSdEeOI_-YITJ2PnA">
+                <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+                <driver xsi:type="infrastructure:EquinoxDriver" href="world.esim#_qyDEoJSbEeOI_-YITJ2PnA"/>
+              </components>
+            </levels>
+          </levels>
+        </levels>
       </levels>
     </levels>
   </levels>

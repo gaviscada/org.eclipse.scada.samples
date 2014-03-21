@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo App
+Bundle-SymbolicName: org.eclipse.scada.samples.demo1.app;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-Activator: org.eclipse.scada.samples.demo1.app.Activator
+Bundle-Vendor: Eclipse SCADA Project
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
