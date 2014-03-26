@@ -111,6 +111,10 @@
 				name="cssTheme"
 				value="org.eclipse.e4.ui.css.theme.e4_default">
 		  </property>
+         <property
+               name="appName"
+               value="Demo Client">
+         </property>
       </product>
    </extension>
  <extension
