@@ -4,7 +4,10 @@
     <children horizontalAlignment="CENTER" verticalAlignment="CENTER" grabHorizontalSpace="true" grabVerticalSpace="true" spanCols="3">
       <element xsi:type="visualInterface:Image" uri="../images/logo.png"/>
     </children>
-    <children horizontalAlignment="END" verticalAlignment="END" spanCols="3">
+    <children horizontalAlignment="CENTER" grabHorizontalSpace="true" spanCols="2">
+      <element xsi:type="visualInterface:Text" text="Press CTRL+L to log on&#xA;&#xA;Username: admin&#xA;Password: admin12"/>
+    </children>
+    <children horizontalAlignment="END" verticalAlignment="END">
       <element xsi:type="visualInterface:Image" uri="../images/icon_48px.png"/>
     </children>
   </root>
