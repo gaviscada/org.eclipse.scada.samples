@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface" backgroundColor="#FFFFFF">
-  <root xsi:type="visualInterface:GridContainer" columns="3" marginWidth="20" marginHeight="20">
-    <children horizontalAlignment="CENTER" verticalAlignment="CENTER" grabHorizontalSpace="true" grabVerticalSpace="true" spanCols="3">
-      <element xsi:type="visualInterface:Image" uri="../images/logo.png"/>
+<visualInterface:Symbol
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface"
+    backgroundColor="#FFFFFF">
+  <root xsi:type="visualInterface:GridContainer"
+      columns="3"
+      marginWidth="20"
+      marginHeight="20">
+    <children
+        horizontalAlignment="CENTER"
+        verticalAlignment="CENTER"
+        grabHorizontalSpace="true"
+        grabVerticalSpace="true"
+        spanCols="3">
+      <element
+          xsi:type="visualInterface:Image"
+          uri="../images/logo.png"/>
     </children>
-    <children horizontalAlignment="CENTER" grabHorizontalSpace="true" spanCols="2">
-      <element xsi:type="visualInterface:Text" text="Press CTRL+L to log on&#xA;&#xA;Username: admin&#xA;Password: admin12"/>
+    <children
+        horizontalAlignment="CENTER"
+        grabHorizontalSpace="true"
+        spanCols="2">
+      <element
+          xsi:type="visualInterface:Text"
+          text="Press CTRL+L to log on&#xA;&#xA;Username: admin&#xA;Password: admin12"/>
     </children>
-    <children horizontalAlignment="END" verticalAlignment="END">
-      <element xsi:type="visualInterface:Image" uri="../images/icon_48px.png"/>
-    </children>
+    <children
+        horizontalAlignment="END"
+        verticalAlignment="END"/>
   </root>
 </visualInterface:Symbol>
