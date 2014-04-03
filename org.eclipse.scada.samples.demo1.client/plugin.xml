@@ -509,7 +509,7 @@
             </parameter>
             <parameter
                   name="itemId"
-                  value="ES.DEMO.SYSMSG.V">
+                  value="ES.DEMO.SYS.MSG.V">
             </parameter>
          </class>
       </viewerExtension>
