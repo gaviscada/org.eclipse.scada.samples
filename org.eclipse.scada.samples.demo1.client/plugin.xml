@@ -456,6 +456,16 @@
             </parameter>
          </class>
       </detailView>
+      <detailView
+            id="org.eclipse.scada.details.arduino">
+         <class
+               class="org.eclipse.scada.vi.details.swt.impl.DetailViewImpl">
+            <parameter
+                  name="uri"
+                  value="platform:/plugin/org.eclipse.scada.samples.demo1.client/resources/details/arduino.detailview">
+            </parameter>
+         </class>
+      </detailView>
    </extension>
    <extension
          point="org.eclipse.scada.vi.ui.user.viewer">

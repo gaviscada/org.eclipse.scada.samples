@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<detailView:View
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:detailView="http://eclipse.org/SCADA/DetailView/1.0">
+  <headerComponent
+      xsi:type="detailView:TextComponent"
+      format="Summary"
+      descriptor="$connection$#$sumItem$"/>
+  <groups label="Overview">
+    <component
+        xsi:type="detailView:GroupGridComponent"
+        cols="1">
+      <groups
+          label="Load Average">
+        <components
+            xsi:type="detailView:TextComponent"
+            format="Luminosity"
+            descriptor="$connection$#$prefix$.LUX.V"/>
+      </groups>
+    </component>
+  </groups>
+</detailView:View>

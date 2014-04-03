@@ -9,7 +9,7 @@
  *     IBH SYSTEMS GmbH - initial API and implementation
  *******************************************************************************/
 function makeHeaderProperties() {
-	properties.put("detailsId", "org.eclipse.scada.details.node");
+	properties.put("detailsId", "org.eclipse.scada.details.arduino");
 	// properties.put("maintenancePrefix", maintenancePrefix());
 	properties.put("sumItem", prefixed("SUM.V"));
 }
