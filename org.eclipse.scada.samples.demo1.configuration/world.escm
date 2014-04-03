@@ -14,6 +14,10 @@
           <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
           <name>TIME</name>
         </components>
+        <components xsi:type="component:PersistentValue" xmi:id="_Oa9SsLs8EeOd9Ir0ZQ45bQ" name="MSG" dataType="STRING">
+          <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+          <customizationTags>input</customizationTags>
+        </components>
         <levels xmi:id="_4-xzoJScEeOI_-YITJ2PnA" name="SRV001">
           <components xsi:type="exec:LoadAverage" xmi:id="_xYQdRJSTEeOI_-YITJ2PnA" name="LAVG">
             <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
@@ -38,6 +42,12 @@
             </levels>
           </levels>
         </levels>
+      </levels>
+      <levels xmi:id="_BiB4cLs8EeOd9Ir0ZQ45bQ" name="TEST">
+        <components xsi:type="component:PersistentValue" xmi:id="_ELFlYLs8EeOd9Ir0ZQ45bQ" shortDescription="" name="MEM01" dataType="STRING">
+          <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+          <customizationTags>input</customizationTags>
+        </components>
       </levels>
     </levels>
   </levels>
