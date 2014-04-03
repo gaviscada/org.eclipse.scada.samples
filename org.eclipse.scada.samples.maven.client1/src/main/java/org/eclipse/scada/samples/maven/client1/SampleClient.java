@@ -9,7 +9,7 @@
  *     IBH SYSTEMS GmbH - initial API and implementation
  *******************************************************************************/
 
-package org.eclipse.scada.sample.maven.client1;
+package org.eclipse.scada.samples.maven.client1;
 
 import java.util.Observable;
 import java.util.Observer;
