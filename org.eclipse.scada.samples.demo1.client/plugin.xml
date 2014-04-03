@@ -505,11 +505,11 @@
                class="org.eclipse.scada.vi.ui.viewer.ext.item.SystemMessageExtension">
             <parameter
                   name="connectionId"
-                  value="connection.main.main">
+                  value="connection.da.main">
             </parameter>
             <parameter
                   name="itemId"
-                  value="ES.DEMO.SCADA.SYSMSG.V">
+                  value="ES.DEMO.SYSMSG.V">
             </parameter>
          </class>
       </viewerExtension>
