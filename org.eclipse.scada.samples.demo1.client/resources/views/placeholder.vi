@@ -16,19 +16,22 @@
         grabVerticalSpace="true"
         spanCols="3">
       <element
-          xsi:type="visualInterface:Image"
-          uri="../images/logo.png"/>
+          xsi:type="visualInterface:XYContainer">
+        <children>
+          <element
+              xsi:type="visualInterface:Image"
+              uri="../images/logo.png"/>
+        </children>
+        <children>
+          <element
+              xsi:type="visualInterface:Image"
+              opaque="false"
+              uri="../images/note.png"/>
+          <position
+              x="200.0"
+              y="25.0"/>
+        </children>
+      </element>
     </children>
-    <children
-        horizontalAlignment="CENTER"
-        grabHorizontalSpace="true"
-        spanCols="2">
-      <element
-          xsi:type="visualInterface:Text"
-          text="Press CTRL+L to log on&#xA;&#xA;Username: admin&#xA;Password: admin12"/>
-    </children>
-    <children
-        horizontalAlignment="END"
-        verticalAlignment="END"/>
   </root>
 </visualInterface:Symbol>
