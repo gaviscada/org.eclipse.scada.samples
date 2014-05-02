@@ -42,6 +42,13 @@
       <additionalDependencies>postgresql-server</additionalDependencies>
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_oM6IYNHmEeOa3PMwxy7ZkA" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
+    <masters xmi:id="_7hdAkNH5EeOrHKz5x9K3Bg" name="master" driver="_oM6IYNHmEeOa3PMwxy7ZkA" archiveTo="_8rr_ENH5EeOrHKz5x9K3Bg">
+      <authoratives xmi:id="_Eie8MNH6EeOrHKz5x9K3Bg">
+        <hierarchy>ES</hierarchy>
+        <hierarchy>DEMO</hierarchy>
+      </authoratives>
+    </masters>
+    <valueArchives xmi:id="_8rr_ENH5EeOrHKz5x9K3Bg" name="hdserver" instanceNumber="2"/>
   </nodes>
   <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_SuF8YJSbEeOI_-YITJ2PnA" hostName="172.20.11.105">
     <devices xsi:type="arduino:ArduinoDevice" xmi:id="_UUt78JSbEeOI_-YITJ2PnA" name="A1" port="8888"/>

@@ -44,9 +44,11 @@
         </levels>
         <levels xmi:id="_6nsMMNHnEeOa3PMwxy7ZkA" name="SRV002" description="scada.eclipse.org">
           <components xsi:type="exec:LoadAverage" xmi:id="_9KoDANHnEeOa3PMwxy7ZkA" name="LAVG">
+            <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
             <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_oM6IYNHmEeOa3PMwxy7ZkA"/>
           </components>
           <components xsi:type="exec:SystemInformationVMStat" xmi:id="_AcZVwNHoEeOa3PMwxy7ZkA" name="VMSTAT">
+            <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
             <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_oM6IYNHmEeOa3PMwxy7ZkA"/>
           </components>
         </levels>
