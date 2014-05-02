@@ -18,7 +18,7 @@
           <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
           <customizationTags>input</customizationTags>
         </components>
-        <levels xmi:id="_4-xzoJScEeOI_-YITJ2PnA" name="SRV001">
+        <levels xmi:id="_4-xzoJScEeOI_-YITJ2PnA" name="SRV001" description="demo.openscada.org">
           <components xsi:type="exec:LoadAverage" xmi:id="_xYQdRJSTEeOI_-YITJ2PnA" name="LAVG">
             <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
             <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_xeJp45STEeOI_-YITJ2PnA"/>
@@ -41,6 +41,14 @@
               </components>
             </levels>
           </levels>
+        </levels>
+        <levels xmi:id="_6nsMMNHnEeOa3PMwxy7ZkA" name="SRV002" description="scada.eclipse.org">
+          <components xsi:type="exec:LoadAverage" xmi:id="_9KoDANHnEeOa3PMwxy7ZkA" name="LAVG">
+            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_oM6IYNHmEeOa3PMwxy7ZkA"/>
+          </components>
+          <components xsi:type="exec:SystemInformationVMStat" xmi:id="_AcZVwNHoEeOa3PMwxy7ZkA" name="VMSTAT">
+            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_oM6IYNHmEeOa3PMwxy7ZkA"/>
+          </components>
         </levels>
       </levels>
       <levels xmi:id="_BiB4cLs8EeOd9Ir0ZQ45bQ" name="TEST">
