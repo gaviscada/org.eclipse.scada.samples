@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
   <levels xmi:id="_1Nc3EJScEeOI_-YITJ2PnA" name="ES">
     <levels xmi:id="_2QfocJScEeOI_-YITJ2PnA" name="DEMO">
+      <itemInterceptors xsi:type="modbus:ModbusExporterInterceptor" xmi:id="_w_HhoNeIEeO0Rdt3yDDcNw">
+        <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+        <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
+        <settings href="world.esim#_0_4BUNeIEeO0Rdt3yDDcNw"/>
+        <script xsi:type="script:ScriptReference" xmi:id="_DJhVMNeMEeOZFcsg_tmaVQ">
+          <reference xsi:type="script:JavaScript" href="customization/modbus.js#/"/>
+        </script>
+      </itemInterceptors>
       <levels xmi:id="_PX7m8JSdEeOI_-YITJ2PnA" name="ARDUINO001">
         <components xsi:type="component:ExternalValue" xmi:id="_T0fR0JSdEeOI_-YITJ2PnA" name="LUX" dataType="FLOAT" sourceName="A1.data.lux">
           <masterOn href="world.esim#_xeJp5ZSTEeOI_-YITJ2PnA"/>
+          <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
           <customizationTags>input</customizationTags>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_qyDEoJSbEeOI_-YITJ2PnA"/>
         </components>
@@ -51,6 +60,20 @@
             <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
             <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_oM6IYNHmEeOa3PMwxy7ZkA"/>
           </components>
+          <levels xmi:id="_uFKn4NnLEeOZf7LZ6B4jOg" name="DRV">
+            <levels xmi:id="_vU-p8NnLEeOZf7LZ6B4jOg" name="EXEC">
+              <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_y839sNnLEeOZf7LZ6B4jOg">
+                <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
+                <driver xsi:type="infrastructure:CommonDriver" href="world.esim#_oM6IYNHmEeOa3PMwxy7ZkA"/>
+              </components>
+            </levels>
+            <levels xmi:id="_v-PCUNnLEeOZf7LZ6B4jOg" name="ARDUINO">
+              <components xsi:type="component:DriverConnectionAnalyzer" xmi:id="_x0BfQNnLEeOZf7LZ6B4jOg">
+                <masterOn href="world.esim#_7hdAkNH5EeOrHKz5x9K3Bg"/>
+                <driver xsi:type="infrastructure:EquinoxDriver" href="world.esim#_qyDEoJSbEeOI_-YITJ2PnA"/>
+              </components>
+            </levels>
+          </levels>
         </levels>
       </levels>
       <levels xmi:id="_BiB4cLs8EeOd9Ir0ZQ45bQ" name="TEST">

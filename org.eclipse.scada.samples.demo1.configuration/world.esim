@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://eclipe.org/SCADA/Configuration/Arduino" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_xeJp4JSTEeOI_-YITJ2PnA">
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://eclipe.org/SCADA/Configuration/Arduino" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_xeJp4JSTEeOI_-YITJ2PnA">
   <nodes xsi:type="infrastructure:SystemNode" xmi:id="_xeJp4pSTEeOI_-YITJ2PnA" hostName="demo.openscada.org">
     <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_htsSwJScEeOI_-YITJ2PnA">
       <changes xmi:id="_ieGcAJScEeOI_-YITJ2PnA" date="2014-02-13T11:49:38.924+0100" description="Initial version." version="0.1.0">
@@ -42,7 +42,7 @@
       <additionalDependencies>postgresql-server</additionalDependencies>
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_oM6IYNHmEeOa3PMwxy7ZkA" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <masters xmi:id="_7hdAkNH5EeOrHKz5x9K3Bg" name="master" driver="_oM6IYNHmEeOa3PMwxy7ZkA" archiveTo="_8rr_ENH5EeOrHKz5x9K3Bg">
+    <masters xmi:id="_7hdAkNH5EeOrHKz5x9K3Bg" name="master" driver="_oM6IYNHmEeOa3PMwxy7ZkA _qyDEoJSbEeOI_-YITJ2PnA" archiveTo="_8rr_ENH5EeOrHKz5x9K3Bg">
       <authoratives xmi:id="_Eie8MNH6EeOrHKz5x9K3Bg">
         <hierarchy>ES</hierarchy>
         <hierarchy>DEMO</hierarchy>
@@ -86,5 +86,11 @@
     <jdbcProperties xmi:id="_NAWhAJScEeOI_-YITJ2PnA" key="password" value="eclipsescada"/>
     <driverBundles>org.openscada.external.postgresql</driverBundles>
   </applicationConfigurations>
-  <configurations xmi:id="_xeKQ9JSTEeOI_-YITJ2PnA"/>
+  <configurations xmi:id="_xeKQ9JSTEeOI_-YITJ2PnA">
+    <configurations xmi:id="_vYTuINeDEeOGSdqbnlLfeg" name="defaultMaster">
+      <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_xu-qkNeDEeOGSdqbnlLfeg"/>
+      <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_yYC1sNeDEeOGSdqbnlLfeg" contextId="eclipsescada"/>
+    </configurations>
+    <settings xsi:type="modbus:ModbusExporterModule" xmi:id="_0_4BUNeIEeO0Rdt3yDDcNw"/>
+  </configurations>
 </infrastructure:World>
