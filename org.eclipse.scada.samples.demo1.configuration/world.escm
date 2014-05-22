@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
+  <properties xmi:id="_eWhpwODnEeOX0vgh2hIbrA" key="modbus.port" value="1502"/>
   <levels xmi:id="_1Nc3EJScEeOI_-YITJ2PnA" name="ES">
     <levels xmi:id="_2QfocJScEeOI_-YITJ2PnA" name="DEMO">
       <itemInterceptors xsi:type="modbus:ModbusExporterInterceptor" xmi:id="_w_HhoNeIEeO0Rdt3yDDcNw">
