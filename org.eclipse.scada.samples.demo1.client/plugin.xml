@@ -574,7 +574,7 @@
             defaultInstance="true"
             name="Logon"
             zooming="false"
-            mainView="false"
+            mainView="true"
             resource="resources/views/placeholder.vi"
             factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
             id="org.eclipse.scada.samples.demo1.client.placeholder">
@@ -597,6 +597,14 @@
                   definitionId="org.eclipse.scada.samples.demo1.client.hassession">
             </reference>
          </visibility>
+      </viewInstance>
+      <viewInstance
+            defaultInstance="false"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="org.eclipse.scada.samples.demo1.client.borders"
+            mainView="true"
+            name="Borders"
+            resource="resources/views/borders.vi">
       </viewInstance>
    </extension>
 
