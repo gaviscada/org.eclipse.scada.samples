@@ -548,6 +548,22 @@
          </class>
       </viewerExtension>
       <viewerExtension
+            align="END"
+            id="org.eclipse.scada.samples.demo1.client.time"
+            location="TOP">
+         <class
+               class="org.eclipse.scada.vi.ui.viewer.ext.item.ItemExtension">
+            <parameter
+                  name="connectionId"
+                  value="connection.da.main">
+            </parameter>
+            <parameter
+                  name="itemId"
+                  value="ES.DEMO.SYS.TIME.V">
+            </parameter>
+         </class>
+      </viewerExtension>
+      <viewerExtension
             location="TOP"
             align="END"
             id="org.eclipse.scada.samples.demo1.client.main.logo">
