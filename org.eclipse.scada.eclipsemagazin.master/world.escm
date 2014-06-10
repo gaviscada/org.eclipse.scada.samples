@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_FNXY0DvnEeOFE4knGugBSA">
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmi:id="_FNXY0DvnEeOFE4knGugBSA">
   <levels xmi:id="_FNXY0TvnEeOFE4knGugBSA" name="REGION1">
     <levels xmi:id="_FNXY0jvnEeOFE4knGugBSA" name="SITE1">
       <components xsi:type="component:ExternalValue" xmi:id="_kfNEADyrEeO7IajceKvz8w" name="MyRandomItem" dataType="INT64" sourceName="random">
@@ -26,4 +26,4 @@
   <infrastructure href="world.esim#_zIpd4DvgEeOFE4knGugBSA"/>
   <defaultCustomizationPipeline xsi:type="item:JavaScriptCustomizationPipeline" href="customization/default.icm_js#/"/>
   <defaultArchiveSelector xsi:type="item:JavaScriptSelector" href="customization/archiveSelector.isel_js#/"/>
-</component:System>
+</component:ComponentWorld>
