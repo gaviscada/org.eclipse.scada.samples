@@ -1,4 +1,4 @@
-importPackage(org.eclipse.scada.configuration.lib);
+var DefaultFeatures = Packages.org.eclipse.scada.configuration.lib.DefaultFeatures;
 
 if ( ( request.isAnalog () || request.isStringType () ) && request.hasTag ( "input" ) ) {
 
@@ -18,7 +18,7 @@ if ( ( request.isAnalog () || request.isStringType () ) && request.hasTag ( "inp
 	}
 	
 	// we grant all analog inputs level monitors for the demo system
-	request.addFeature ( DefaultFeatures.HH(null) );
+	request.addFeature ( org.eclipse.scada.configuration.lib.DefaultFeatures.HH(null) );
 	request.addFeature ( DefaultFeatures.H(null) );
 	request.addFeature ( DefaultFeatures.L(null) );
 	request.addFeature ( DefaultFeatures.LL(null) );
