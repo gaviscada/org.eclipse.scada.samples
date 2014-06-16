@@ -5,6 +5,40 @@
    <extension
          point="org.eclipse.scada.core.ui.connection.login.context">
       <context
+            label="Sample Context (scada.eclipse.org)"
+            id="org.eclipse.scada.samples.demo1.client.scada.eclipse.org">
+         <factory
+               class="org.eclipse.scada.core.ui.connection.login.factory.ConnectionLoginFactory">
+         </factory>
+         <connection
+               authUseCallbacks="true"
+               uri="da:ngp://scada.eclipse.org:2101?session.privilege.developer=true&amp;session.privilege.admin=true&amp;session.privilege.operator=true"
+               autoReconnectDelay="10000"
+               mode="NORMAL">
+            <registration
+                  servicePid="connection.da.main">
+            </registration>
+         </connection>
+         <connection
+               authUseCallbacks="true"
+               uri="ae:ngp://scada.eclipse.org:2201"
+               autoReconnectDelay="10000"
+               mode="NORMAL">
+            <registration
+                  servicePid="connection.ae.main">
+            </registration>
+         </connection>
+         <connection
+               authUseCallbacks="true"
+               uri="hd:ngp://scada.eclipse.org:2302"
+               autoReconnectDelay="10000"
+               mode="OPTIONAL">
+            <registration
+                  servicePid="connection.hd.main">
+            </registration>
+         </connection>
+      </context>
+ 	<context
             label="Sample Context (demo.openscada.org)"
             id="org.eclipse.scada.samples.demo1.client.demo.openscada.org">
          <factory
@@ -514,6 +548,22 @@
          </class>
       </viewerExtension>
       <viewerExtension
+            align="END"
+            id="org.eclipse.scada.samples.demo1.client.time"
+            location="TOP">
+         <class
+               class="org.eclipse.scada.vi.ui.viewer.ext.item.ItemExtension">
+            <parameter
+                  name="connectionId"
+                  value="connection.da.main">
+            </parameter>
+            <parameter
+                  name="itemId"
+                  value="ES.DEMO.SYS.TIME.V">
+            </parameter>
+         </class>
+      </viewerExtension>
+      <viewerExtension
             location="TOP"
             align="END"
             id="org.eclipse.scada.samples.demo1.client.main.logo">
@@ -540,7 +590,7 @@
             defaultInstance="true"
             name="Logon"
             zooming="false"
-            mainView="false"
+            mainView="true"
             resource="resources/views/placeholder.vi"
             factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
             id="org.eclipse.scada.samples.demo1.client.placeholder">
@@ -563,6 +613,14 @@
                   definitionId="org.eclipse.scada.samples.demo1.client.hassession">
             </reference>
          </visibility>
+      </viewInstance>
+      <viewInstance
+            defaultInstance="false"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="org.eclipse.scada.samples.demo1.client.borders"
+            mainView="true"
+            name="Borders"
+            resource="resources/views/borders.vi">
       </viewInstance>
    </extension>
 

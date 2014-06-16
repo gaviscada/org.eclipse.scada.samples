@@ -3,10 +3,18 @@
   <root xsi:type="visualInterface:XYContainer">
     <children>
       <element xsi:type="visualInterface:SymbolReference" uri="../symbols/node/node.vi">
-        <properties key="title" value="SRV001"/>
+        <properties key="title" value="demo.openscada.org"/>
         <properties key="prefix" value="ES.DEMO.SYS.SRV001"/>
       </element>
       <position x="10.0" y="10.0"/>
+      <dimension width="200.0" height="-1.0"/>
+    </children>
+    <children>
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/node/node.vi">
+        <properties key="title" value="scada.eclipse.org"/>
+        <properties key="prefix" value="ES.DEMO.SYS.SRV002"/>
+      </element>
+      <position x="220.0" y="10.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children>
     <children>
