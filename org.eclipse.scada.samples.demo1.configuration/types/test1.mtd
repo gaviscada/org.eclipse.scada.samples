@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memory:TypeSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:memory="http://eclipse.org/SCADA/Configuration/Memory" name="Test1">
+  <types name="TEST1">
+    <variables name="a">
+      <type xsi:type="memory:UnsignedInteger16Type"/>
+    </variables>
+  </types>
+</memory:TypeSystem>

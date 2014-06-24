@@ -1,96 +1,139 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://eclipe.org/SCADA/Configuration/Arduino" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_xeJp4JSTEeOI_-YITJ2PnA">
-  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_xeJp4pSTEeOI_-YITJ2PnA" hostName="demo.openscada.org">
-    <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_htsSwJScEeOI_-YITJ2PnA">
-      <changes xmi:id="_ieGcAJScEeOI_-YITJ2PnA" date="2014-02-13T11:49:38.924+0100" description="Initial version." version="0.1.0">
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://eclipe.org/SCADA/Configuration/Arduino" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:parser="http://eclipse.org/SCADA/DA/Server/Parser" xmlns:parserDriver="http://eclipse.org/SCADA/Configuration/Driver/Parser" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_tiIpgOaTEeOz_d9aE-D5Rg">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_tiIpguaTEeOz_d9aE-D5Rg" hostName="demo.openscada.org">
+    <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_tiIpg-aTEeOz_d9aE-D5Rg">
+      <changes xmi:id="_tiIphOaTEeOz_d9aE-D5Rg" date="2014-02-13T11:49:38.924+0100" description="Initial version." version="0.1.0">
         <author href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       </changes>
       <maintainer href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       <additionalDependencies>org.openscada.p2.repo.main >= 1.2.0</additionalDependencies>
       <additionalDependencies>postgresql-server</additionalDependencies>
     </deployment>
-    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_xeJp45STEeOI_-YITJ2PnA" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <valueArchives xmi:id="_xeJp5JSTEeOI_-YITJ2PnA" name="hdserver" instanceNumber="2"/>
-    <masters xmi:id="_xeJp5ZSTEeOI_-YITJ2PnA" name="master" driver="_xeJp45STEeOI_-YITJ2PnA _qyDEoJSbEeOI_-YITJ2PnA" archiveTo="_xeJp5JSTEeOI_-YITJ2PnA">
-      <authoratives xmi:id="_xeJp5pSTEeOI_-YITJ2PnA">
+    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiIpheaTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
+    <valueArchives xmi:id="_tiIphuaTEeOz_d9aE-D5Rg" name="hdserver" instanceNumber="2"/>
+    <masters xmi:id="_tiIph-aTEeOz_d9aE-D5Rg" name="master" driver="_tiIpheaTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiJQl-aTEeOz_d9aE-D5Rg" archiveTo="_tiIphuaTEeOz_d9aE-D5Rg">
+      <authoratives xmi:id="_tiIpiOaTEeOz_d9aE-D5Rg">
         <hierarchy>ES</hierarchy>
         <hierarchy>DEMO</hierarchy>
       </authoratives>
     </masters>
   </nodes>
-  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_xeJp55STEeOI_-YITJ2PnA" hostName="ostest1.muc.ibhmgt.de">
-    <deployment xsi:type="deployment:DebianDeploymentMechanism" xmi:id="_hnv4QJSbEeOI_-YITJ2PnA">
-      <changes xmi:id="_k4FnoJSbEeOI_-YITJ2PnA" date="2014-02-13T11:42:45.454+0100" description="Initial version" version="0.1.0">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_tiIpieaTEeOz_d9aE-D5Rg" hostName="ostest1.muc.ibhmgt.de">
+    <deployment xsi:type="deployment:DebianDeploymentMechanism" xmi:id="_tiIpiuaTEeOz_d9aE-D5Rg">
+      <changes xmi:id="_tiIpi-aTEeOz_d9aE-D5Rg" date="2014-02-13T11:42:45.454+0100" description="Initial version" version="0.1.0">
         <author href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       </changes>
       <maintainer href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
     </deployment>
-    <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_qyDEoJSbEeOI_-YITJ2PnA" name="arduino" driverTypeId="org.eclipse.scada.da.server.arduino" devices="_UUt78JSbEeOI_-YITJ2PnA" instanceNumber="8">
-      <userService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_0a0VsJSbEeOI_-YITJ2PnA">
-        <users xmi:id="_00eL0JSbEeOI_-YITJ2PnA" name="driver" password="driver12"/>
+    <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_tiJQkOaTEeOz_d9aE-D5Rg" name="arduino" driverTypeId="org.eclipse.scada.da.server.arduino" devices="_tiJQnOaTEeOz_d9aE-D5Rg" instanceNumber="8">
+      <userService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_tiJQkeaTEeOz_d9aE-D5Rg">
+        <users xmi:id="_tiJQkuaTEeOz_d9aE-D5Rg" name="driver" password="driver12"/>
       </userService>
-      <accessCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_3POXAJSbEeOI_-YITJ2PnA" username="driver" password="driver12"/>
+      <accessCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_tiJQk-aTEeOz_d9aE-D5Rg" username="driver" password="driver12"/>
     </drivers>
   </nodes>
-  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_DiRzgNHmEeOa3PMwxy7ZkA" hostName="scada.eclipse.org">
-    <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_GJAlMNHmEeOa3PMwxy7ZkA" license="EPL">
-      <changes xmi:id="_kFF-cNHmEeOa3PMwxy7ZkA" date="2014-05-02T12:43:13.399+0200" description="Initial version." version="0.1.0">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_tiJQlOaTEeOz_d9aE-D5Rg" hostName="scada.eclipse.org">
+    <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_tiJQleaTEeOz_d9aE-D5Rg" license="EPL">
+      <changes xmi:id="_tiJQluaTEeOz_d9aE-D5Rg" date="2014-05-02T12:43:13.399+0200" description="Initial version." version="0.1.0">
         <author href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       </changes>
       <maintainer href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       <additionalDependencies>org.openscada.p2.repo.main >= 1.2.0</additionalDependencies>
       <additionalDependencies>postgresql-server</additionalDependencies>
     </deployment>
-    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_oM6IYNHmEeOa3PMwxy7ZkA" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <masters xmi:id="_7hdAkNH5EeOrHKz5x9K3Bg" name="master" driver="_oM6IYNHmEeOa3PMwxy7ZkA _qyDEoJSbEeOI_-YITJ2PnA" archiveTo="_8rr_ENH5EeOrHKz5x9K3Bg">
-      <authoratives xmi:id="_Eie8MNH6EeOrHKz5x9K3Bg">
+    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiJQl-aTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
+    <masters xmi:id="_tiJQmOaTEeOz_d9aE-D5Rg" name="master" driver="_tiJQl-aTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiIpheaTEeOz_d9aE-D5Rg" archiveTo="_tiJQmuaTEeOz_d9aE-D5Rg">
+      <authoratives xmi:id="_tiJQmeaTEeOz_d9aE-D5Rg">
         <hierarchy>ES</hierarchy>
         <hierarchy>DEMO</hierarchy>
       </authoratives>
     </masters>
-    <valueArchives xmi:id="_8rr_ENH5EeOrHKz5x9K3Bg" name="hdserver" instanceNumber="2"/>
+    <valueArchives xmi:id="_tiJQmuaTEeOz_d9aE-D5Rg" name="hdserver" instanceNumber="2"/>
   </nodes>
-  <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_SuF8YJSbEeOI_-YITJ2PnA" hostName="172.20.11.105">
-    <devices xsi:type="arduino:ArduinoDevice" xmi:id="_UUt78JSbEeOI_-YITJ2PnA" name="A1" port="8888"/>
+  <nodes xsi:type="infrastructure:ExternalNode" xmi:id="_tiJQm-aTEeOz_d9aE-D5Rg" hostName="172.20.11.105">
+    <devices xsi:type="arduino:ArduinoDevice" xmi:id="_tiJQnOaTEeOz_d9aE-D5Rg" name="A1" port="8888"/>
   </nodes>
-  <options xmi:id="_xeJp7JSTEeOI_-YITJ2PnA">
-    <monitorPools xmi:id="_xeJp7ZSTEeOI_-YITJ2PnA" name="monitors.unsafe" filter="(status=UNSAFE)"/>
-    <monitorPools xmi:id="_xeJp7pSTEeOI_-YITJ2PnA" name="monitors.inactive" filter="(status=INACTIVE)"/>
-    <monitorPools xmi:id="_xeJp75STEeOI_-YITJ2PnA" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
-    <monitorPools xmi:id="_xeJp8JSTEeOI_-YITJ2PnA" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
-    <monitorPools xmi:id="_xeJp8ZSTEeOI_-YITJ2PnA" name="monitors.init" filter="(status=INIT)"/>
-    <monitorPools xmi:id="_xeJp8pSTEeOI_-YITJ2PnA" name="monitors.all" filter="(status=*)"/>
-    <eventPools xmi:id="_xeJp85STEeOI_-YITJ2PnA" name="events.all" filter="(eventType=*)" size="10000"/>
-    <defaultUserService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_xeJp9JSTEeOI_-YITJ2PnA">
-      <users xmi:id="_xeKQ8JSTEeOI_-YITJ2PnA" name="admin" password="admin12">
+  <nodes xsi:type="infrastructure:SystemNode" xmi:id="_tiJQneaTEeOz_d9aE-D5Rg" hostName="pi01.intra">
+    <deployment xsi:type="deployment:DebianDeploymentMechanism" xmi:id="_tiJQnuaTEeOz_d9aE-D5Rg" startupMechanism="LSB_SYSV">
+      <changes xmi:id="_tiJQn-aTEeOz_d9aE-D5Rg" date="2014-05-21T15:23:28.709+0200" description="Initial version" version="0.0.1">
+        <author href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
+      </changes>
+      <maintainer href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
+    </deployment>
+    <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiJQoOaTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
+    <drivers xsi:type="parserDriver:ParserComponentHost" xmi:id="_tiJQoeaTEeOz_d9aE-D5Rg" name="parser">
+      <components xmi:id="_tiJ3oOaTEeOz_d9aE-D5Rg" id="proc.cmdline">
+        <input xsi:type="parser:FileInput" xmi:id="_tiJ3oeaTEeOz_d9aE-D5Rg" fileName="/proc/uptime"/>
+        <extractors xsi:type="parser:PlainText" xmi:id="_tiJ3ouaTEeOz_d9aE-D5Rg"/>
+      </components>
+      <components xmi:id="_3IWLQOaSEeOz_d9aE-D5Rg" id="fortiss">
+        <input xsi:type="parser:UrlInput" xmi:id="_3-aQkOaSEeOz_d9aE-D5Rg" url="http://livinglab.fortiss.org/solarlog/min_cur.js" charset="UTF-8"/>
+        <extractors xsi:type="parser:SinglePattern" xmi:id="_eni5gOaTEeOz_d9aE-D5Rg" prefix="ac" pattern="(?m)^var Pac=([0-9\.]+)$">
+          <value xmi:id="_rwPA0OoyEeOLu9xf4ttUWw">
+            <primaryValue xsi:type="parser:NumericGroupField" xmi:id="_18XdoOoyEeOLu9xf4ttUWw" type="DOUBLE" groupNumber="1"/>
+          </value>
+        </extractors>
+        <extractors xsi:type="parser:SinglePattern" xmi:id="_nlo14OaTEeOz_d9aE-D5Rg" prefix="dc" pattern="(?m)^var aPdc=new Array\(([0-9\\.]+).*?\)$">
+          <value xmi:id="_sAwwIOoyEeOLu9xf4ttUWw">
+            <primaryValue xsi:type="parser:NumericGroupField" xmi:id="_0TIO8OoyEeOLu9xf4ttUWw" type="DOUBLE" groupNumber="1"/>
+          </value>
+        </extractors>
+      </components>
+    </drivers>
+    <masters xmi:id="_tiJ3o-aTEeOz_d9aE-D5Rg" name="master" configuration="_tiKeuuaTEeOz_d9aE-D5Rg" driver="_tiJQoOaTEeOz_d9aE-D5Rg" archiveTo="_tiJ3pOaTEeOz_d9aE-D5Rg"/>
+    <valueArchives xmi:id="_tiJ3pOaTEeOz_d9aE-D5Rg" name="hdserver" instanceNumber="2"/>
+  </nodes>
+  <options xmi:id="_tiJ3peaTEeOz_d9aE-D5Rg">
+    <monitorPools xmi:id="_tiJ3puaTEeOz_d9aE-D5Rg" name="monitors.unsafe" filter="(status=UNSAFE)"/>
+    <monitorPools xmi:id="_tiJ3p-aTEeOz_d9aE-D5Rg" name="monitors.inactive" filter="(status=INACTIVE)"/>
+    <monitorPools xmi:id="_tiJ3qOaTEeOz_d9aE-D5Rg" name="monitors.not_ok" filter="(|(status=NOT_OK)(status=NOT_OK_NOT_AKN)(status=NOT_OK_AKN))"/>
+    <monitorPools xmi:id="_tiJ3qeaTEeOz_d9aE-D5Rg" name="monitors.ack_required" filter="(|(status=NOT_AKN)(status=NOT_OK_NOT_AKN))"/>
+    <monitorPools xmi:id="_tiJ3quaTEeOz_d9aE-D5Rg" name="monitors.init" filter="(status=INIT)"/>
+    <monitorPools xmi:id="_tiJ3q-aTEeOz_d9aE-D5Rg" name="monitors.all" filter="(status=*)"/>
+    <eventPools xmi:id="_tiJ3rOaTEeOz_d9aE-D5Rg" name="events.all" filter="(eventType=*)" size="10000"/>
+    <defaultUserService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_tiJ3reaTEeOz_d9aE-D5Rg">
+      <users xmi:id="_tiJ3ruaTEeOz_d9aE-D5Rg" name="admin" password="admin12">
         <roles>DEVELOPER</roles>
         <roles>OPERATOR</roles>
         <roles>ADMIN</roles>
       </users>
-      <users xmi:id="_xeKQ8ZSTEeOI_-YITJ2PnA" name="interconnect" password="interconnect12">
+      <users xmi:id="_tiJ3r-aTEeOz_d9aE-D5Rg" name="interconnect" password="interconnect12">
         <roles>INTERLINK</roles>
       </users>
-      <users xmi:id="_3PzDEJV9EeOM9d9xIEME_A" name="guest" password="guest12"/>
+      <users xmi:id="_tiJ3sOaTEeOz_d9aE-D5Rg" name="guest" password="guest12"/>
     </defaultUserService>
   </options>
   <defaultSecurityConfiguration href="global/global.security#/"/>
   <defaultMasterHandlerPriorities href="platform:/plugin/org.eclipse.scada.configuration.lib/model/defaultPriorities.eswm#_sLVwoN_iEeKP_IG4d7_Nqg"/>
-  <defaultCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_xeKQ8pSTEeOI_-YITJ2PnA" username="interconnect" password="interconnect12"/>
+  <defaultCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_tiJ3seaTEeOz_d9aE-D5Rg" username="interconnect" password="interconnect12"/>
   <defaultMasterCustomizationProfile href="global/master.customization.profile.xml#/"/>
   <defaultValueArchiveCustomizationProfile href="global/hdserver.customization.profile.xml#/"/>
-  <defaultDriverPassword xmi:id="_xeKQ85STEeOI_-YITJ2PnA" password="driver12"/>
-  <applicationConfigurations xsi:type="osgi:EventStorageJdbc" xmi:id="_CX0cEJScEeOI_-YITJ2PnA" archiveDays="15" cleanupPeriodSeconds="300" jdbcDriverName="org.postgresql.Driver" maxFieldLength="4000">
-    <jdbcProperties xmi:id="_H7gHEJScEeOI_-YITJ2PnA" key="databaseName" value="eclipsescada"/>
-    <jdbcProperties xmi:id="_J6F6sJScEeOI_-YITJ2PnA" key="serverName" value="localhost"/>
-    <jdbcProperties xmi:id="_LsIgEJScEeOI_-YITJ2PnA" key="user" value="eclipsescada"/>
-    <jdbcProperties xmi:id="_NAWhAJScEeOI_-YITJ2PnA" key="password" value="eclipsescada"/>
-    <driverBundles>org.openscada.external.postgresql</driverBundles>
-  </applicationConfigurations>
-  <configurations xmi:id="_xeKQ9JSTEeOI_-YITJ2PnA">
-    <configurations xmi:id="_vYTuINeDEeOGSdqbnlLfeg" name="defaultMaster">
-      <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_xu-qkNeDEeOGSdqbnlLfeg"/>
-      <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_yYC1sNeDEeOGSdqbnlLfeg" contextId="eclipsescada"/>
+  <defaultDriverPassword xmi:id="_tiJ3suaTEeOz_d9aE-D5Rg" password="driver12"/>
+  <configurations xmi:id="_tiJ3s-aTEeOz_d9aE-D5Rg">
+    <configurations xmi:id="_tiKesOaTEeOz_d9aE-D5Rg" name="defaultMaster">
+      <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeseaTEeOz_d9aE-D5Rg"/>
+      <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_tiKesuaTEeOz_d9aE-D5Rg" contextId="eclipsescada"/>
+      <configurations xsi:type="osgi:EventStorageJdbc" xmi:id="_tiKes-aTEeOz_d9aE-D5Rg" archiveDays="15" cleanupPeriodSeconds="300" jdbcDriverName="org.postgresql.Driver" maxFieldLength="4000">
+        <jdbcProperties xmi:id="_tiKetOaTEeOz_d9aE-D5Rg" key="databaseName" value="eclipsescada"/>
+        <jdbcProperties xmi:id="_tiKeteaTEeOz_d9aE-D5Rg" key="serverName" value="localhost"/>
+        <jdbcProperties xmi:id="_tiKetuaTEeOz_d9aE-D5Rg" key="user" value="eclipsescada"/>
+        <jdbcProperties xmi:id="_tiKet-aTEeOz_d9aE-D5Rg" key="password" value="eclipsescada"/>
+        <driverBundles>org.openscada.external.postgresql</driverBundles>
+      </configurations>
     </configurations>
-    <settings xsi:type="modbus:ModbusExporterModule" xmi:id="_0_4BUNeIEeO0Rdt3yDDcNw"/>
+    <configurations xmi:id="_tiKeuOaTEeOz_d9aE-D5Rg" name="test">
+      <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeueaTEeOz_d9aE-D5Rg" port="3"/>
+    </configurations>
+    <configurations xmi:id="_tiKeuuaTEeOz_d9aE-D5Rg" name="piMaster">
+      <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeu-aTEeOz_d9aE-D5Rg"/>
+      <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_tiKevOaTEeOz_d9aE-D5Rg" contextId="eclipsescada"/>
+      <modules xsi:type="infrastructure:WebAdminConsole" xmi:id="_tiKeveaTEeOz_d9aE-D5Rg" httpService="_tiKeu-aTEeOz_d9aE-D5Rg"/>
+      <modules xsi:type="infrastructure:OracleVMSettings" xmi:id="_tiKevuaTEeOz_d9aE-D5Rg" maximumHeapSize="1024m"/>
+    </configurations>
+    <settings xsi:type="modbus:ModbusExporterModule" xmi:id="_tiKev-aTEeOz_d9aE-D5Rg"/>
+    <settings xsi:type="infrastructure:DatabaseSettings" xmi:id="_e_FbAPt0EeO-4tLXpGArVg" id="DB1" driverName="postgres.Jdbc">
+      <properties xmi:id="_MjtPYPt1EeO-4tLXpGArVg" key="user" value="test"/>
+      <properties xmi:id="_N4AI0Pt1EeO-4tLXpGArVg" key="password" value="test12"/>
+    </settings>
   </configurations>
 </infrastructure:World>
