@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart:Chart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chart="http://eclipse.org/SCADA/UI/Chart" title="Title" selectedYAxis="#//@left.0 #//@left.1 #//@left.2" selectedXAxis="#//@bottom.0 #//@bottom.1" mutable="false" profileSwitcherType="CHECK">
+  <bottom label="Timestamp" format="MM-dd&#xA;HH:mm:ss.SSS" minimum="1401866981685" maximum="1401919096463"/>
+  <bottom label="bbb" minimum="1401864519516" maximum="1401924016548"/>
+  <left label="Load Average (1m)" minimum="-9.995672666504966" maximum="13.168979106605546"/>
+  <left label="asd" textPadding="2" minimum="-54.28571428571442" maximum="145.71428571428606"/>
+  <left label="bbb" format="" minimum="-11.195885791286106" maximum="1.452397558154573"/>
+  <inputs xsi:type="chart:ArchiveSeries" label="ES.DEMO.SYS.SRV001.LAVG1.V" x="#//@bottom.0" y="#//@left.0" ignoreFuture="true">
+    <item xsi:type="chart:IdItem" itemId="ES.DEMO.SYS.SRV001.LAVG1.V" connectionId="connection.hd.main"/>
+    <lineProperties color="#FF0000"/>
+  </inputs>
+  <inputs xsi:type="chart:ArchiveSeries" label="ES.DEMO.SYS.SRV002.LAVG1.V" x="#//@bottom.0" y="#//@left.0" ignoreFuture="true">
+    <item xsi:type="chart:IdItem" itemId="ES.DEMO.SYS.SRV002.LAVG1.V" connectionId="connection.hd.main"/>
+    <lineProperties color="#00FF00"/>
+  </inputs>
+  <inputs xsi:type="chart:ScriptSeries" label="aaa" x="#//@bottom.0" y="#//@left.0" script="Math.sin ( timestamp / 500000.0 ) + 5;">
+    <lineProperties color="#FF00FF"/>
+  </inputs>
+  <inputs xsi:type="chart:ScriptSeries" label="bbb" x="#//@bottom.1" y="#//@left.2" script="Math.sin ( timestamp / 500000.0 ) - 5;">
+    <lineProperties color="#00FFFF"/>
+  </inputs>
+  <controllers xsi:type="chart:TimeNowAction"/>
+  <controllers xsi:type="chart:MouseController"/>
+  <controllers xsi:type="chart:ScaleAction" timespan="86400000" label="1d"/>
+  <profiles id="id1" label="Legend">
+    <controllers xsi:type="chart:LegendController" timestampFormat="yyyy-MM-dd HH:mm:ss.SSS"/>
+  </profiles>
+</chart:Chart>
