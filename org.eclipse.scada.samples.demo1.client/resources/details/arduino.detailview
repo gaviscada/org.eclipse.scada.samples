@@ -17,6 +17,9 @@
         <components
             xsi:type="detailView:TextComponent"
             format="Luminosity"
+            hdConnectionId="$hdConnection$"
+            hdItemId="$prefix$.LUX.V"
+            hdQueryString="2400000:600000:0:70000"
             descriptor="$connection$#$prefix$.LUX.V"/>
       </groups>
     </component>
