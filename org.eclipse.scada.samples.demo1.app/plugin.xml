@@ -120,16 +120,16 @@
  <extension
          point="org.eclipse.ui.activities">
       <activity
-            id="com.ibh.systems.eon.vpp.app.default"
+            id="org.eclipse.scada.samples.demo1.app.default"
             name="Default">
       </activity>
       <activityPatternBinding
-            activityId="com.ibh.systems.eon.vpp.app.default"
+            activityId="org.eclipse.scada.samples.demo1.app.default"
             isEqualityPattern="false"
             pattern=".*\/org.eclipse.ui.openLocalFile">
       </activityPatternBinding>
       <activityPatternBinding
-            activityId="com.ibh.systems.eon.vpp.app.default"
+            activityId="org.eclipse.scada.samples.demo1.app.default"
             isEqualityPattern="false"
             pattern=".*\/org.eclipse.ui.edit.text.delimiter\..*">
       </activityPatternBinding>
