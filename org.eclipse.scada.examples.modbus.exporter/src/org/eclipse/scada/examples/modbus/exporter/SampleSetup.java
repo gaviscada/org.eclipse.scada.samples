@@ -14,6 +14,7 @@ import org.eclipse.scada.core.ConnectionInformation;
 import org.eclipse.scada.da.server.exporter.modbus.ModbusExport;
 import org.eclipse.scada.da.server.exporter.modbus.StaticModbusExport;
 import org.eclipse.scada.da.server.exporter.modbus.StaticModbusExport.Builder;
+import org.eclipse.scada.da.server.exporter.modbus.io.UnsignedIntegerType;
 import org.eclipse.scada.da.server.exporter.modbus.io.UnsignedShortIntegerType;
 import org.eclipse.scada.da.server.ngp.Exporter;
 
@@ -37,7 +38,10 @@ public class SampleSetup
 
         final Builder builder = new StaticModbusExport.Builder ( this.hive );
 
-        builder.addExport ( "mem1", 0, UnsignedShortIntegerType.INSTANCE );
+        int offset = 0;
+        builder.addExport ( "mem1", offset, UnsignedShortIntegerType.INSTANCE );
+        offset += UnsignedShortIntegerType.LENGTH;
+        builder.addExport ( "mem1", offset, UnsignedIntegerType.INSTANCE );
 
         this.modbusExporter = builder.build ();
     }
