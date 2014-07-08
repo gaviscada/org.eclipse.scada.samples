@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipse SCADA Modbus Exporter Example
+Bundle-SymbolicName: org.eclipse.scada.examples.modbus.exporter;singleton:=true
+Bundle-Version: 0.2.0.qualifier
+Bundle-Vendor: Eclipse SCADA Project
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: ch.qos.logback.classic;version="1.0.7",
+ ch.qos.logback.core;version="1.0.7",
+ org.eclipse.scada.core;version="0.1.0",
+ org.eclipse.scada.core.data;version="0.1.0",
+ org.eclipse.scada.core.server;version="0.1.0",
+ org.eclipse.scada.core.server.common;version="0.1.0",
+ org.eclipse.scada.da.core;version="0.1.0",
+ org.eclipse.scada.da.core.server;version="0.1.0",
+ org.eclipse.scada.da.server.browser.common;version="0.1.0",
+ org.eclipse.scada.da.server.common;version="0.1.0",
+ org.eclipse.scada.da.server.common.impl;version="0.1.0",
+ org.eclipse.scada.da.server.exporter.modbus;version="0.2.0",
+ org.eclipse.scada.da.server.exporter.modbus.io;version="0.2.0",
+ org.eclipse.scada.da.server.ngp;version="0.1.0",
+ org.eclipse.scada.sec;version="0.1.0",
+ org.eclipse.scada.utils.concurrent;version="0.2.0",
+ org.slf4j;version="1.7.2"
+Require-Bundle: org.eclipse.equinox.app
