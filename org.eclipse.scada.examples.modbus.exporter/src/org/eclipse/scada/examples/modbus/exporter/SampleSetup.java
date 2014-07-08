@@ -30,19 +30,27 @@ public class SampleSetup
 
     public SampleSetup () throws Exception
     {
+        // create and start the hive instance
         this.hive = new SampleHive ();
         this.hive.start ();
 
+        // create and start the DA:NGP exporter
         this.ngpExporter = new Exporter ( this.hive, ConnectionInformation.fromURI ( "da:ngp://0.0.0.0:2199" ) );
         this.ngpExporter.start ();
 
+        // create the builder for creating the static modbus exporter
         final Builder builder = new StaticModbusExport.Builder ( this.hive );
 
+        // add exports
+        /*
+         * note that the export the same item using two data types (16bit and 32bit)
+         */
         int offset = 0;
         builder.addExport ( "mem1", offset, UnsignedShortIntegerType.INSTANCE );
         offset += UnsignedShortIntegerType.LENGTH;
         builder.addExport ( "mem1", offset, UnsignedIntegerType.INSTANCE );
 
+        // create and start the modbus exporter
         this.modbusExporter = builder.build ();
     }
 
