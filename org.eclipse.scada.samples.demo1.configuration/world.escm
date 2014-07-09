@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
   <properties xmi:id="_eWhpwODnEeOX0vgh2hIbrA" key="modbus.port" value="1502"/>
   <levels xmi:id="_1Nc3EJScEeOI_-YITJ2PnA" name="ES">
     <levels xmi:id="_2QfocJScEeOI_-YITJ2PnA" name="DEMO">
@@ -77,7 +77,7 @@
           <components xsi:type="exec:SystemInformationVMStat" xmi:id="_AcZVwNHoEeOa3PMwxy7ZkA" name="VMSTAT">
             <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
             <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
-            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_tiIpheaTEeOz_d9aE-D5Rg"/>
+            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_tiJQl-aTEeOz_d9aE-D5Rg"/>
           </components>
           <levels xmi:id="_uFKn4NnLEeOZf7LZ6B4jOg" name="DRV">
             <levels xmi:id="_vU-p8NnLEeOZf7LZ6B4jOg" name="EXEC">
@@ -96,16 +96,6 @@
             </levels>
           </levels>
         </levels>
-        <levels xmi:id="_VxCTQODqEeO-dvr0gm-qlA" name="SRV003">
-          <components xsi:type="exec:LoadAverage" xmi:id="_XQ3HQODqEeO-dvr0gm-qlA" shortDescription="" name="LAVG">
-            <masterOn href="world.esim#_tiJ3o-aTEeOz_d9aE-D5Rg"/>
-            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_tiJQoOaTEeOz_d9aE-D5Rg"/>
-          </components>
-          <components xsi:type="exec:SystemInformationVMStat" xmi:id="_YPeEkODqEeO-dvr0gm-qlA" name="VMSTAT">
-            <masterOn href="world.esim#_tiJ3o-aTEeOz_d9aE-D5Rg"/>
-            <runsOn xsi:type="infrastructure:CommonDriver" href="world.esim#_tiJQoOaTEeOz_d9aE-D5Rg"/>
-          </components>
-        </levels>
       </levels>
       <levels xmi:id="_BiB4cLs8EeOd9Ir0ZQ45bQ" name="TEST">
         <components xsi:type="component:PersistentValue" xmi:id="_ELFlYLs8EeOd9Ir0ZQ45bQ" shortDescription="" name="MEM01" dataType="STRING">
@@ -113,6 +103,24 @@
           <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
           <customizationTags>input</customizationTags>
         </components>
+        <levels xmi:id="_oJt3MPt3EeOka8VBI_XEZA" name="SQL1">
+          <components xsi:type="jdbc:UpdateCommand" xmi:id="_qra-8Pt3EeOka8VBI_XEZA" name="UP1" sql="select 1">
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <database href="world.esim#_e_FbAPt0EeO-4tLXpGArVg"/>
+            <runsOn href="world.esim#_W0rLEPuEEeO-f56CEkRkzg"/>
+            <mappings xmi:id="_xJ76gPt3EeOka8VBI_XEZA" namedParameter="V1"/>
+          </components>
+        </levels>
+        <levels xmi:id="_4siwUPt3EeOka8VBI_XEZA" name="SQL2">
+          <components xsi:type="jdbc:QueryComponent" xmi:id="_6R9O8Pt3EeOka8VBI_XEZA" sql="select 1,2" name="Q1" period="1000" defaultDataType="INT32">
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <database href="world.esim#_e_FbAPt0EeO-4tLXpGArVg"/>
+            <runsOn href="world.esim#_W0rLEPuEEeO-f56CEkRkzg"/>
+            <mappings xmi:id="_JjwlEPt4EeOka8VBI_XEZA" name="ONE"/>
+            <mappings xmi:id="_dhKVYPt9EeOI3dKoRtsWzQ" columnNumber="2" name="TWO"/>
+            <defaultCustomizationTags>input</defaultCustomizationTags>
+          </components>
+        </levels>
       </levels>
     </levels>
   </levels>
