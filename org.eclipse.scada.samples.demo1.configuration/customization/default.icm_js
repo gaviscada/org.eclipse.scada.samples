@@ -28,21 +28,24 @@ if ( ( request.isAnalog () || request.isStringType () ) && request.hasTag ( "inp
 	request.addFeature ( DefaultFeatures.ROUND(null) );
 	
 	// all analog inputs end with "V = value"
-	request.getLocalTags().add ( "V" );
+	request.getLocalTags().add ( "V" ); // V = value
 
 } else if ( request.isDigital () && request.hasTag ( "input" ) )
-	request.getLocalTags().add ( "M" );
+	request.getLocalTags().add ( "M" ); // message
 
 else if ( request.isDigital () && request.hasTag ( "command" ) )
-	request.getLocalTags().add ( "C" );
+	request.getLocalTags().add ( "C" ); // command
+
+else if ( request.isAnalog () && request.hasTag ( "output" ) )
+	request.getLocalTags().add ( "S" ); // setpoint
 
 else if ( request.hasTag ( "summary" ) ) {
 	request.getLocalTags().removeLast ();
 	request.getLocalTags().add ( "SUM" );
-	request.getLocalTags().add ( "V" );
+	request.getLocalTags().add ( "V" ); // value
 	
 } else
-	request.getLocalTags().add ( "X" );
+	request.getLocalTags().add ( "X" ); //unknown
 
 // Always add a manual override for inputs
 

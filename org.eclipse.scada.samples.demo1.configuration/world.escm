@@ -13,17 +13,44 @@
       </itemInterceptors>
       <itemInterceptors xsi:type="iec60870:ExporterItemInterceptor" xmi:id="_8ZtjMPJDEeOKLbh93amRAw">
         <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+        <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
         <script xsi:type="script:ScriptReference" xmi:id="_laZ5YPJEEeOpLoaTWBU2Zw">
           <reference xsi:type="script:JavaScript" href="customization/iec60870.js#/"/>
         </script>
         <protocolOptions xmi:id="_NXig0PJFEeOpLoaTWBU2Zw" targetTimeZone="Europe/Berlin"/>
         <dataModuleOptions xmi:id="_Ns_MYPJFEeOpLoaTWBU2Zw"/>
+        <hiveProperties xmi:id="_mz3OUAtsEeSpyYGLvBY2-Q" key="user" value="admin"/>
+        <hiveProperties xmi:id="_n_hJIAtsEeSpyYGLvBY2-Q" key="password" value="admin12"/>
       </itemInterceptors>
       <levels xmi:id="_PX7m8JSdEeOI_-YITJ2PnA" name="ARDUINO001">
         <components xsi:type="component:ExternalValue" xmi:id="_T0fR0JSdEeOI_-YITJ2PnA" name="LUX" dataType="FLOAT" sourceName="A1.data.lux">
           <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
           <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
           <customizationTags>input</customizationTags>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_x6JsABCrEeSh5sX4S0Y-vw" name="LIGHT" dataType="FLOAT" sourceName="A1.data.lux">
+          <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+          <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+          <customizationTags>input</customizationTags>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_2jB7oBCrEeSh5sX4S0Y-vw" name="HUMIDITY" dataType="FLOAT" sourceName="A1.data.humidity">
+          <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+          <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+          <customizationTags>input</customizationTags>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_7BtGYBCrEeSh5sX4S0Y-vw" name="TEMPERATURE" dataType="FLOAT" sourceName="A1.data.temperature">
+          <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+          <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+          <customizationTags>input</customizationTags>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_CGAPkBCsEeSh5sX4S0Y-vw" name="LEDBAR" dataType="FLOAT" sourceName="A1.data.ledBar">
+          <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+          <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+          <customizationTags>output</customizationTags>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
         </components>
       </levels>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<recipe:Definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:recipe="http://eclipse.org/SCADA/Configuration/Recipe">
+<recipe:Definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:recipe="http://eclipse.org/SCADA/Configuration/Recipe" name="Productive" id="productive">
   <task name="Load Models">
     <execute name="bundle-class://org.eclipse.scada.configuration.utils/org.eclipse.scada.configuration.utils.LoadModel#load">
       <inputValue xsi:type="recipe:StringInputValue" name="uri" value="world.escm"/>
