@@ -18,9 +18,23 @@
             xsi:type="detailView:TextComponent"
             format="Luminosity"
             hdConnectionId="$hdConnection$"
-            hdItemId="$prefix$.LUX.V"
+            hdItemId="$prefix$.LIGHT.V"
             hdQueryString="2400000:600000:0:30000"
-            descriptor="$connection$#$prefix$.LUX.V"/>
+            descriptor="$connection$#$prefix$.LIGHT.V"/>
+        <components
+            xsi:type="detailView:TextComponent"
+            format="Temperature (°C)"
+            hdConnectionId="$hdConnection$"
+            hdItemId="$prefix$.TEMPERATURE.V"
+            hdQueryString="2400000:600000:0:50"
+            descriptor="$connection$#$prefix$.TEMPERATURE.V"/>
+        <components
+            xsi:type="detailView:TextComponent"
+            format="Humidity (%)"
+            hdConnectionId="$hdConnection$"
+            hdItemId="$prefix$.HUMIDITY.V"
+            hdQueryString="2400000:600000:0:100"
+            descriptor="$connection$#$prefix$.HUMIDITY.V"/>
       </groups>
     </component>
   </groups>
