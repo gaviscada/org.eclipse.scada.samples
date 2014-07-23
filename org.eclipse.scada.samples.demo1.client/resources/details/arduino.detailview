@@ -16,10 +16,10 @@
           label="Measured Data">
         <components
             xsi:type="detailView:TextComponent"
-            format="Luminosity"
+            format="Light"
             hdConnectionId="$hdConnection$"
             hdItemId="$prefix$.LIGHT.V"
-            hdQueryString="86400000:600000:0:1000000"
+            hdQueryString="86400000:600000:0:2000"
             descriptor="$connection$#$prefix$.LIGHT.V"/>
         <components
             xsi:type="detailView:TextComponent"

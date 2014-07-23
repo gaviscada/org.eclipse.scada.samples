@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chart:Chart xmlns:chart="http://eclipse.org/SCADA/UI/Chart" selectedYAxis="#//@left.0" selectedXAxis="#//@bottom.0" mutable="false">
-  <bottom/>
-  <left/>
+<chart:Chart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chart="http://eclipse.org/SCADA/UI/Chart" title="Arduino" selectedYAxis="#//@left.0" selectedXAxis="#//@bottom.0" mutable="false" timeRulerAxis="#//@bottom.0">
+  <bottom label="Time" format="HH:mm" minimum="1406066400000" maximum="1406152800000"/>
+  <left textPadding="1" labelVisible="false" minimum="-10.0" maximum="70.0"/>
+  <left textPadding="1" labelVisible="false" minimum="0.0" maximum="120.0"/>
+  <left textPadding="1" labelVisible="false" minimum="0.0" maximum="2000.0"/>
+  <inputs xsi:type="chart:ArchiveSeries" label="Temperature" x="#//@bottom.0" y="#//@left.0" ignoreFuture="true">
+    <item xsi:type="chart:IdItem" itemId="ES.DEMO.ARDUINO001.TEMPERATURE.V" connectionId="connection.hd.main"/>
+    <lineProperties color="#FF0000"/>
+  </inputs>
+  <inputs xsi:type="chart:ArchiveSeries" label="Humidity" x="#//@bottom.0" y="#//@left.1" ignoreFuture="true">
+    <item xsi:type="chart:IdItem" itemId="ES.DEMO.ARDUINO001.HUMIDITY.V" connectionId="connection.hd.main"/>
+    <lineProperties color="#0000FF"/>
+  </inputs>
+  <inputs xsi:type="chart:ArchiveSeries" label="Light" x="#//@bottom.0" y="#//@left.2" ignoreFuture="true">
+    <item xsi:type="chart:IdItem" itemId="ES.DEMO.ARDUINO001.LIGHT.V" connectionId="connection.hd.main"/>
+    <lineProperties color="#00FF00"/>
+  </inputs>
+  <inputs xsi:type="chart:CompositeArchiveQualitySeries" x="#//@bottom.0" y="#//@left.0" visible="false" threshold="0.7"/>
+  <controllers xsi:type="chart:CurrentTimeController" axis="#//@bottom.0" alignDateFormat="yyyy-MM-dd" timespan="86400000"/>
+  <controllers xsi:type="chart:LegendController" timestampFormat="HH:mm"/>
 </chart:Chart>

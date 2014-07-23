@@ -8,7 +8,7 @@
       <element xsi:type="visualInterface:FigureContainer" backgroundColor="#FFFFFF" opaque="true">
         <content xsi:type="visualInterface:GridContainer" columns="3">
           <children>
-            <element xsi:type="visualInterface:Text" text="Luminosity"/>
+            <element xsi:type="visualInterface:Text" text="Light"/>
           </children>
           <children horizontalAlignment="FILL" grabHorizontalSpace="true">
             <element xsi:type="visualInterface:SymbolReference" uri="../textValue.vi" onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;LUX.V&quot;  ) );"/>
