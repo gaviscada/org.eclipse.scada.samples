@@ -42,7 +42,7 @@
 		<repository>
 			<id>eclipse.scada</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/eclipsescada/updates/release/0.1.0/</url>
+			<url>http://download.eclipse.org/eclipsescada/updates/nightly/0.2/</url>
 		</repository>
 	</repositories>
 
