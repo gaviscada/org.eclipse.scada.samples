@@ -8,24 +8,26 @@
       <element xsi:type="visualInterface:FigureContainer" backgroundColor="#FFFFFF" opaque="true">
         <content xsi:type="visualInterface:GridContainer" columns="3">
           <children>
-            <element xsi:type="visualInterface:Text" text="CPU Idle"/>
+            <element xsi:type="visualInterface:Text" text="PV DC"/>
           </children>
           <children horizontalAlignment="FILL" grabHorizontalSpace="true">
-            <element xsi:type="visualInterface:SymbolReference" uri="../textValue.vi" onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;CPU.IDLE.V&quot;  ) );">
+            <element xsi:type="visualInterface:SymbolReference" uri="../textValue.vi" onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;PV.DC.V&quot;  ) );">
               <properties key="format" value="%.0f"/>
             </element>
           </children>
           <children>
-            <element xsi:type="visualInterface:Text" text="%"/>
+            <element xsi:type="visualInterface:Text" text=""/>
           </children>
           <children>
-            <element xsi:type="visualInterface:Text" text="Load Average"/>
+            <element xsi:type="visualInterface:Text" text="PV AC"/>
           </children>
           <children horizontalAlignment="FILL" grabHorizontalSpace="true">
-            <element xsi:type="visualInterface:SymbolReference" uri="../textValue.vi" onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;LAVG1.V&quot;  ) );"/>
+            <element xsi:type="visualInterface:SymbolReference" uri="../textValue.vi" onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;PV.AC.V&quot;  ) );">
+              <properties key="format" value="%.0f"/>
+            </element>
           </children>
           <children>
-            <element xsi:type="visualInterface:Text"/>
+            <element xsi:type="visualInterface:Text" text=""/>
           </children>
         </content>
       </element>
@@ -35,5 +37,5 @@
   <scriptModules>../../common/colors.js</scriptModules>
   <scriptModules>../../common/detailDialog.js</scriptModules>
   <scriptModules>../../common/items.js</scriptModules>
-  <scriptModules>node.js</scriptModules>
+  <scriptModules>fortiss.js</scriptModules>
 </visualInterface:Symbol>

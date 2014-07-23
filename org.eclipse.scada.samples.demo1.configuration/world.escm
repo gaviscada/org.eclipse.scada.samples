@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:parserDriver="http://eclipse.org/SCADA/Configuration/Driver/Parser" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
   <properties xmi:id="_eWhpwODnEeOX0vgh2hIbrA" key="modbus.port" value="1502"/>
   <levels xmi:id="_1Nc3EJScEeOI_-YITJ2PnA" name="ES">
     <levels xmi:id="_2QfocJScEeOI_-YITJ2PnA" name="DEMO">
@@ -146,6 +146,22 @@
             <mappings xmi:id="_JjwlEPt4EeOka8VBI_XEZA" name="ONE"/>
             <mappings xmi:id="_dhKVYPt9EeOI3dKoRtsWzQ" columnNumber="2" name="TWO"/>
             <defaultCustomizationTags>input</defaultCustomizationTags>
+          </components>
+        </levels>
+      </levels>
+      <levels xmi:id="_0cDe0BGtEeSs3Yl3m044SA" name="FORTISS">
+        <levels xmi:id="_2WqxYBGtEeSs3Yl3m044SA" name="PV">
+          <components xsi:type="component:ExternalValue" xmi:id="_6FxC4BG5EeS0gICyQfUAqw" name="AC" dataType="FLOAT" sourceName="fortiss.ac.value">
+            <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <customizationTags>input</customizationTags>
+            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
+          </components>
+          <components xsi:type="component:ExternalValue" xmi:id="_6j4iQBG5EeS0gICyQfUAqw" name="DC" dataType="FLOAT" sourceName="fortiss.dc.value">
+            <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <customizationTags>input</customizationTags>
+            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
           </components>
         </levels>
       </levels>

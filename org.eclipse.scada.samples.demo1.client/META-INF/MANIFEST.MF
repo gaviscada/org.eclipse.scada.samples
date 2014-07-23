@@ -19,6 +19,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.scada.vi.ui.user;bundle-version="0.1.0",
  org.eclipse.scada.vi.ui.viewer.ext;bundle-version="0.1.0",
  org.eclipse.scada.ui.chart.view;bundle-version="0.1.0",
- org.eclipse.scada.samples.demo1.app;bundle-version="0.1.0"
+ org.eclipse.scada.samples.demo1.app;bundle-version="0.1.0",
+ org.eclipse.scada.vi.ui.chart.draw2d;bundle-version="0.1.0",
+ org.eclipse.scada.vi.ui.draw2d;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy

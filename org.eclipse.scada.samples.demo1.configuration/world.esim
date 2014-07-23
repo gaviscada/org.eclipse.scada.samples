@@ -16,7 +16,7 @@
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiIpheaTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <valueArchives xmi:id="_tiIphuaTEeOz_d9aE-D5Rg" name="hdserver" instanceNumber="2"/>
-    <masters xmi:id="_tiIph-aTEeOz_d9aE-D5Rg" name="master" driver="_tiIpheaTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiJQl-aTEeOz_d9aE-D5Rg" archiveTo="_tiIphuaTEeOz_d9aE-D5Rg">
+    <masters xmi:id="_tiIph-aTEeOz_d9aE-D5Rg" name="master" driver="_tiIpheaTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiJQl-aTEeOz_d9aE-D5Rg _vs3y4BGtEeSs3Yl3m044SA" archiveTo="_tiIphuaTEeOz_d9aE-D5Rg">
       <authoratives xmi:id="_tiIpiOaTEeOz_d9aE-D5Rg">
         <hierarchy>ES</hierarchy>
         <hierarchy>DEMO</hierarchy>
@@ -51,7 +51,27 @@
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiJQl-aTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <drivers xsi:type="jdbc:JdbcDriver" xmi:id="_W0rLEPuEEeO-f56CEkRkzg" name="jdbc" portNumber="2108"/>
-    <masters xmi:id="_tiJQmOaTEeOz_d9aE-D5Rg" name="master" driver="_tiJQl-aTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiIpheaTEeOz_d9aE-D5Rg _W0rLEPuEEeO-f56CEkRkzg" archiveTo="_tiJQmuaTEeOz_d9aE-D5Rg">
+    <drivers xsi:type="parserDriver:ParserComponentHost" xmi:id="_vs3y4BGtEeSs3Yl3m044SA" name="parser" instanceNumber="9">
+      <accessCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_B9WNsBG7EeS0gICyQfUAqw" username="admin" password="admin12"/>
+      <components xmi:id="_vs3y4RGtEeSs3Yl3m044SA" id="proc.cmdline">
+        <input xsi:type="parser:FileInput" xmi:id="_vs3y4hGtEeSs3Yl3m044SA" fileName="/proc/uptime"/>
+        <extractors xsi:type="parser:PlainText" xmi:id="_vs3y4xGtEeSs3Yl3m044SA"/>
+      </components>
+      <components xmi:id="_vs3y5BGtEeSs3Yl3m044SA" id="fortiss">
+        <input xsi:type="parser:UrlInput" xmi:id="_vs3y5RGtEeSs3Yl3m044SA" url="http://livinglab.fortiss.org/solarlog/min_cur.js" charset="UTF-8"/>
+        <extractors xsi:type="parser:SinglePattern" xmi:id="_vs3y5hGtEeSs3Yl3m044SA" prefix="ac" pattern="(?m)^var Pac=([0-9\.]+)$">
+          <value xmi:id="_vs3y5xGtEeSs3Yl3m044SA">
+            <primaryValue xsi:type="parser:NumericGroupField" xmi:id="_vs3y6BGtEeSs3Yl3m044SA" type="DOUBLE" groupNumber="1"/>
+          </value>
+        </extractors>
+        <extractors xsi:type="parser:SinglePattern" xmi:id="_vs3y6RGtEeSs3Yl3m044SA" prefix="dc" pattern="(?m)^var aPdc=new Array\(([0-9\\.]+).*?\)$">
+          <value xmi:id="_vs3y6hGtEeSs3Yl3m044SA">
+            <primaryValue xsi:type="parser:NumericGroupField" xmi:id="_vs3y6xGtEeSs3Yl3m044SA" type="DOUBLE" groupNumber="1"/>
+          </value>
+        </extractors>
+      </components>
+    </drivers>
+    <masters xmi:id="_tiJQmOaTEeOz_d9aE-D5Rg" name="master" driver="_tiJQl-aTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiIpheaTEeOz_d9aE-D5Rg _W0rLEPuEEeO-f56CEkRkzg _vs3y4BGtEeSs3Yl3m044SA" archiveTo="_tiJQmuaTEeOz_d9aE-D5Rg">
       <authoratives xmi:id="_tiJQmeaTEeOz_d9aE-D5Rg">
         <hierarchy>ES</hierarchy>
         <hierarchy>DEMO</hierarchy>
@@ -70,25 +90,6 @@
       <maintainer href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiJQoOaTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
-    <drivers xsi:type="parserDriver:ParserComponentHost" xmi:id="_tiJQoeaTEeOz_d9aE-D5Rg" name="parser">
-      <components xmi:id="_tiJ3oOaTEeOz_d9aE-D5Rg" id="proc.cmdline">
-        <input xsi:type="parser:FileInput" xmi:id="_tiJ3oeaTEeOz_d9aE-D5Rg" fileName="/proc/uptime"/>
-        <extractors xsi:type="parser:PlainText" xmi:id="_tiJ3ouaTEeOz_d9aE-D5Rg"/>
-      </components>
-      <components xmi:id="_3IWLQOaSEeOz_d9aE-D5Rg" id="fortiss">
-        <input xsi:type="parser:UrlInput" xmi:id="_3-aQkOaSEeOz_d9aE-D5Rg" url="http://livinglab.fortiss.org/solarlog/min_cur.js" charset="UTF-8"/>
-        <extractors xsi:type="parser:SinglePattern" xmi:id="_eni5gOaTEeOz_d9aE-D5Rg" prefix="ac" pattern="(?m)^var Pac=([0-9\.]+)$">
-          <value xmi:id="_rwPA0OoyEeOLu9xf4ttUWw">
-            <primaryValue xsi:type="parser:NumericGroupField" xmi:id="_18XdoOoyEeOLu9xf4ttUWw" type="DOUBLE" groupNumber="1"/>
-          </value>
-        </extractors>
-        <extractors xsi:type="parser:SinglePattern" xmi:id="_nlo14OaTEeOz_d9aE-D5Rg" prefix="dc" pattern="(?m)^var aPdc=new Array\(([0-9\\.]+).*?\)$">
-          <value xmi:id="_sAwwIOoyEeOLu9xf4ttUWw">
-            <primaryValue xsi:type="parser:NumericGroupField" xmi:id="_0TIO8OoyEeOLu9xf4ttUWw" type="DOUBLE" groupNumber="1"/>
-          </value>
-        </extractors>
-      </components>
-    </drivers>
     <masters xmi:id="_tiJ3o-aTEeOz_d9aE-D5Rg" name="master" configuration="_tiKeuuaTEeOz_d9aE-D5Rg" driver="_tiJQoOaTEeOz_d9aE-D5Rg" archiveTo="_tiJ3pOaTEeOz_d9aE-D5Rg"/>
     <valueArchives xmi:id="_tiJ3pOaTEeOz_d9aE-D5Rg" name="hdserver" instanceNumber="2"/>
   </nodes>

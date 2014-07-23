@@ -25,6 +25,19 @@
       <position x="10.0" y="100.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children>
+    <children>
+      <element xsi:type="visualInterface:Text"/>
+      <position x="10.0" y="300.0"/>
+      <dimension width="300.0" height="200.0"/>
+    </children>
+    <children>
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/fortiss/fortiss.vi">
+        <properties key="title" value="fortiss Living Lab"/>
+        <properties key="prefix" value="ES.DEMO.FORTISS"/>
+      </element>
+      <position x="220.0" y="100.0"/>
+      <dimension width="200.0" height="-1.0"/>
+    </children>
   </root>
   <properties key="connection" value="connection.da.main"/>
   <properties key="hdConnection" value="connection.hd.main"/>

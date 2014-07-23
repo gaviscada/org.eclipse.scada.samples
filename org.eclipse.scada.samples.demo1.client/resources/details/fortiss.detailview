@@ -13,28 +13,21 @@
         xsi:type="detailView:GroupGridComponent"
         cols="1">
       <groups
-          label="Measured Data">
+          label="PV">
         <components
             xsi:type="detailView:TextComponent"
-            format="Luminosity"
+            format="DC"
             hdConnectionId="$hdConnection$"
-            hdItemId="$prefix$.LIGHT.V"
-            hdQueryString="86400000:600000:0:1000000"
-            descriptor="$connection$#$prefix$.LIGHT.V"/>
+            hdItemId="$prefix$.PV.DC.V"
+            hdQueryString="86400000:600000:0:4000"
+            descriptor="$connection$#$prefix$.PV.DC.V"/>
         <components
             xsi:type="detailView:TextComponent"
-            format="Temperature (°C)"
+            format="AC"
             hdConnectionId="$hdConnection$"
-            hdItemId="$prefix$.TEMPERATURE.V"
-            hdQueryString="86400000:600000:0:50"
-            descriptor="$connection$#$prefix$.TEMPERATURE.V"/>
-        <components
-            xsi:type="detailView:TextComponent"
-            format="Humidity (%)"
-            hdConnectionId="$hdConnection$"
-            hdItemId="$prefix$.HUMIDITY.V"
-            hdQueryString="86400000:600000:0:100"
-            descriptor="$connection$#$prefix$.HUMIDITY.V"/>
+            hdItemId="$prefix$.PV.AC.V"
+            hdQueryString="86400000:600000:0:4000"
+            descriptor="$connection$#$prefix$.PV.AC.V"/>
       </groups>
     </component>
   </groups>

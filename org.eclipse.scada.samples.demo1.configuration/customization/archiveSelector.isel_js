@@ -8,6 +8,21 @@ function select () {
 	if ( request.isLocalTags ( [ "LUX", "V" ] ) ) {
 		return true;
 	}
+	if ( request.isLocalTags ( [ "TEMPERATURE", "V" ] ) ) {
+		return true;
+	}
+	if ( request.isLocalTags ( [ "LIGHT", "V" ] ) ) {
+		return true;
+	}
+	if ( request.isLocalTags ( [ "HUMIDITY", "V" ] ) ) {
+		return true;
+	}
+	if ( request.isLocalTags ( [ "DC", "V" ] ) ) {
+		return true;
+	}
+	if ( request.isLocalTags ( [ "AC", "V" ] ) ) {
+		return true;
+	}
 }
 
 select (); // use return value
