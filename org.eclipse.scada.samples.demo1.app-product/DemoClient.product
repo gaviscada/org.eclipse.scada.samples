@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Demo Client" uid="org.eclipse.scada.samples.products.demo1.app" id="org.eclipse.scada.samples.demo1.app.product" application="org.eclipse.scada.samples.demo1.app.application" version="0.1.0" useFeatures="true" includeLaunchers="true">
+<product name="Demo Client" uid="org.eclipse.scada.samples.products.demo1.app" id="org.eclipse.scada.samples.demo1.app.product" application="org.eclipse.scada.samples.demo1.app.application" version="0.2.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/org.eclipse.scada.samples.demo1.app/branding/about.png"/>

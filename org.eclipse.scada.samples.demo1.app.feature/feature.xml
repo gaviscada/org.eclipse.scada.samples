@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.scada.samples.demo1.app"
       label="%featureName"
-      version="0.1.0.qualifier"
+      version="0.2.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -46,6 +46,27 @@ Contributors:
 
    <plugin
          id="org.eclipse.scada.samples.demo1.client"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.help"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.help.base"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.help.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
