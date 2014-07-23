@@ -115,6 +115,10 @@
                name="appName"
                value="Demo Client">
          </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
       </product>
    </extension>
  <extension
