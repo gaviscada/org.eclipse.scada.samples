@@ -38,6 +38,14 @@
       <position x="220.0" y="100.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children>
+    <children name="greenhouse-eclipse">
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/greenhouse/greenhouse.vi">
+        <properties key="title" value="Eclipse Greenhouse"/>
+        <properties key="prefix" value="ES.DEMO.GREENHOUSE.ECLIPSE"/>
+      </element>
+      <position x="430.0" y="10.0"/>
+      <dimension width="200.0" height="-1.0"/>
+    </children>
   </root>
   <properties key="connection" value="connection.da.main"/>
   <properties key="hdConnection" value="connection.hd.main"/>

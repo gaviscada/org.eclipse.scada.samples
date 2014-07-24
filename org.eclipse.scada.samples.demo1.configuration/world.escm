@@ -165,6 +165,20 @@
           </components>
         </levels>
       </levels>
+      <levels xmi:id="_LuNUYBMnEeS2lsu97D1sdw" name="GREENHOUSE">
+        <levels xmi:id="_PQ9CYBMnEeS2lsu97D1sdw" name="ECLIPSE">
+          <components xsi:type="component:ExternalValue" xmi:id="_ehSNIBMMEeS2lsu97D1sdw" name="TEMPERATURE" dataType="FLOAT" sourceName="greenhouse-eclipse-temperature.text">
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <customizationTags>input</customizationTags>
+            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
+          </components>
+          <components xsi:type="component:ExternalValue" xmi:id="_wGYnUBMnEeS2lsu97D1sdw" name="LIGHT" dataType="BOOLEAN" sourceName="greenhouse-eclipse-light.text">
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <customizationTags>command</customizationTags>
+            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
+          </components>
+        </levels>
+      </levels>
     </levels>
   </levels>
   <configurations xsi:type="component:MarkerConfiguration" xmi:id="_xYREU5STEeOI_-YITJ2PnA">
