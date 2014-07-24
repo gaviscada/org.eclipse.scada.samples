@@ -72,13 +72,13 @@
       </components>
       <components xmi:id="_xmWLwBMHEeSjHMvJjartLA" id="greenhouse-eclipse-temperature">
         <input xsi:type="parser:MqttInput" xmi:id="_iD11QBMJEeS2lsu97D1sdw" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/benjamin/sensors/temperature" qos="2">
-          <transformers xsi:type="parser:StringTransformer" xmi:id="_-28-0BMKEeS2lsu97D1sdw" charset="UTF-8"/>
+          <transformers xsi:type="parser:StringTransformer" xmi:id="_-28-0BMKEeS2lsu97D1sdw"/>
         </input>
         <extractors xsi:type="parser:PlainText" xmi:id="_WKIU8BMMEeS2lsu97D1sdw"/>
       </components>
       <components xmi:id="_osj6EBMnEeS2lsu97D1sdw" id="greenhouse-eclipse-light">
         <input xsi:type="parser:MqttInput" xmi:id="_osj6ERMnEeS2lsu97D1sdw" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/benjamin/sensors/light" qos="2">
-          <transformers xsi:type="parser:StringTransformer" xmi:id="_osj6EhMnEeS2lsu97D1sdw" charset="UTF-8"/>
+          <transformers xsi:type="parser:StringTransformer" xmi:id="_osj6EhMnEeS2lsu97D1sdw"/>
         </input>
         <extractors xsi:type="parser:PlainText" xmi:id="_osj6ExMnEeS2lsu97D1sdw"/>
       </components>

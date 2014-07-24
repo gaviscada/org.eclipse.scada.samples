@@ -14,7 +14,7 @@
             <element xsi:type="visualInterface:SymbolReference" uri="../textValue.vi" onCreateProperties="properties.put ( &quot;item&quot;, prefixed (&quot;TEMPERATURE.V&quot;  ) );"/>
           </children>
           <children>
-            <element xsi:type="visualInterface:Text" text=""/>
+            <element xsi:type="visualInterface:Text" text="°C"/>
           </children>
         </content>
       </element>

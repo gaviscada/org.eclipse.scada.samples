@@ -172,10 +172,9 @@
             <customizationTags>input</customizationTags>
             <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
           </components>
-          <components xsi:type="component:ExternalValue" xmi:id="_wGYnUBMnEeS2lsu97D1sdw" name="LIGHT" dataType="BOOLEAN" sourceName="greenhouse-eclipse-light.text">
+          <components xsi:type="component:PersistentValue" xmi:id="_Kc_mUBM2EeSziI3gzDdmow" name="LIGHT" dataType="BOOLEAN">
             <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
             <customizationTags>command</customizationTags>
-            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
           </components>
         </levels>
       </levels>
