@@ -15,7 +15,7 @@
       <element xsi:type="visualInterface:XYContainer">
       
       	<children>
-          <element xsi:type="visualInterface:Rectangle" fill="true" backgroundColor="#ff0000" lineWidth="-1" antialias="true" toolTip="Rectangle without outline">
+          <element xsi:type="visualInterface:Rectangle" fill="true" backgroundColor="#ff0000" lineWidth="-1" antialias="true" foregroundColor="#00ff00" toolTip="Rectangle without outline">
 	          <size width="150.0" height="75.0"/>
           </element>
           <position x="20.0" y="20.0"/>
@@ -95,7 +95,7 @@
       	</children>
       	<children>
           <element xsi:type="visualInterface:Text" fontName="monospace">
-              <text><![CDATA[<element xsi:type="visualInterface:Polygon"
+              <text><![CDATA[<element xsi:type="visualInterface:Line"
   lineWidth="2"
   antialias="true">
     <points x="75.0" y="0.0"/>
@@ -169,7 +169,7 @@
       	</children>
       	
       	<children>
-          <element xsi:type="visualInterface:RoundedRectangle" fill="true" backgroundColor="#888888" lineWidth="3" antialias="true" toolTip="RoundedRectangle without outline">
+          <element xsi:type="visualInterface:RoundedRectangle" fill="true" backgroundColor="#888888" lineWidth="2" antialias="true" toolTip="RoundedRectangle without outline">
 	          <size width="150.0" height="75.0"/>
 	          <corner width="40.0" height="40.0"/>
           </element>
@@ -180,7 +180,7 @@
               <text><![CDATA[<element xsi:type="visualInterface:RoundedRectangle" 
   fill="true" 
   backgroundColor="#888888"
-  lineWidth="-1"
+  lineWidth="2"
   antialias="true">
     <size width="150.0" height="75.0"/>
     <corner width="40.0" height="40.0"/>
