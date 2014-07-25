@@ -86,9 +86,10 @@
       	
       	<children>
           <element xsi:type="visualInterface:Line" lineWidth="2" antialias="true" toolTip="Polyline (Line) with 2px width">
-	          <points x="75.0" y="0.0"/>
-	          <points x="0.0" y="75.0"/>
-	          <points x="0.0" y="0.0"/>
+              <!-- position has to start at 1, because with a 2px width one half of the line would be missing -->
+	          <points x="75.0" y="1.0"/>
+	          <points x="1.0" y="75.0"/>
+	          <points x="1.0" y="1.0"/>
 	          <points x="75.0" y="75.0"/>
           </element>
           <position x="20.0" y="480.0"/>
@@ -98,9 +99,9 @@
               <text><![CDATA[<element xsi:type="visualInterface:Line"
   lineWidth="2"
   antialias="true">
-    <points x="75.0" y="0.0"/>
-    <points x="0.0" y="75.0"/>
-    <points x="0.0" y="0.0"/>
+    <points x="75.0" y="1.0"/>
+    <points x="1.0" y="75.0"/>
+    <points x="1.0" y="1.0"/>
     <points x="75.0" y="75.0"/>
 </element>]]></text>
 	          <size width="150.0" height="75.0"/>
