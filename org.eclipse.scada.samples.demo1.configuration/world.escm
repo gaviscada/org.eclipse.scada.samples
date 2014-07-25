@@ -6,6 +6,7 @@
       <itemInterceptors xsi:type="modbus:ModbusExporterInterceptor" xmi:id="_w_HhoNeIEeO0Rdt3yDDcNw">
         <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
         <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+        <properties xmi:id="_0Kio8BPaEeSziI3gzDdmow" key="modbus.port" value="1502"/>
         <settings href="world.esim#_tiKev-aTEeOz_d9aE-D5Rg"/>
         <script xsi:type="script:ScriptReference" xmi:id="_DJhVMNeMEeOZFcsg_tmaVQ">
           <reference xsi:type="script:JavaScript" href="customization/modbus.js#/"/>

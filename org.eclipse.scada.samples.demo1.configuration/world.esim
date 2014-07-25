@@ -169,7 +169,10 @@
       <modules xsi:type="infrastructure:WebAdminConsole" xmi:id="_tiKeveaTEeOz_d9aE-D5Rg" httpService="_tiKeu-aTEeOz_d9aE-D5Rg"/>
       <modules xsi:type="infrastructure:OracleVMSettings" xmi:id="_tiKevuaTEeOz_d9aE-D5Rg" maximumHeapSize="1024m"/>
     </configurations>
-    <settings xsi:type="modbus:ModbusExporterModule" xmi:id="_tiKev-aTEeOz_d9aE-D5Rg"/>
+    <settings xsi:type="modbus:ModbusExporterModule" xmi:id="_tiKev-aTEeOz_d9aE-D5Rg">
+      <properties xmi:id="_e9-SoBPcEeSkVbjRvTvGVw" key="user" value="admin"/>
+      <properties xmi:id="_-bMHcBPcEeSF-M_G3XdhsA" key="password" value="admin12"/>
+    </settings>
     <settings xsi:type="infrastructure:DatabaseSettings" xmi:id="_e_FbAPt0EeO-4tLXpGArVg" id="DB1" driverName="org.postgresql.Driver" uri="jdbc:postgresql://localhost/eclipsescada" user="eclipsescada" password="eclipsescada"/>
   </configurations>
 </infrastructure:World>
