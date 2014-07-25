@@ -25,7 +25,7 @@
             <properties key="description" value="This is the complex syntax. 3 pixels, red color."/>
           </element>
           <position x="460.0" y="20.0"/>
-          <dimension width="200.0" height="-1.0"/>
+          <dimension width="250.0" height="-1.0"/>
         </children>
         <children>
           <element xsi:type="visualInterface:SymbolReference" uri="borderSample.vi">

@@ -632,6 +632,14 @@
             name="Borders"
             resource="resources/views/borders.vi">
       </viewInstance>
+      <viewInstance
+            defaultInstance="false"
+            factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+            id="org.eclipse.scada.samples.demo1.client.shapes"
+            mainView="true"
+            name="Shapes"
+            resource="resources/views/shapes.vi">
+      </viewInstance>
    </extension>
 
 </plugin>

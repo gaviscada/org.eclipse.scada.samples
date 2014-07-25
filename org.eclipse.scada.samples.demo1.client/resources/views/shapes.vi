@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualInterface:Symbol xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualInterface="http://eclipse.org/SCADA/VisualInterface">
+  <root xsi:type="visualInterface:BorderContainer">
+    <children alignment="TOP">
+      <element xsi:type="visualInterface:GridContainer" columns="2" horizontalSpacing="30">
+        <children verticalAlignment="FILL">
+          <element xsi:type="visualInterface:Text" text="Shape Samples" fontSize="15" fontBold="true"/>
+        </children>
+        <children verticalAlignment="FILL">
+          <element xsi:type="visualInterface:Text" text="Hover over the shapes to see the description."/>
+        </children>
+      </element>
+    </children>
+    <children alignment="CENTER">
+      <element xsi:type="visualInterface:XYContainer">
+      
+      	<children>
+          <element xsi:type="visualInterface:Rectangle" fill="true" backgroundColor="#ff0000" lineWidth="-1" antialias="true" toolTip="Rectangle without outline">
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="20.0" y="20.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Rectangle" 
+  fill="true" 
+  backgroundColor="#ff0000"
+  lineWidth="-1"
+  antialias="true">
+    <size width="150.0" height="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="190.0" y="20.0"/>
+      	</children>
+      	
+      	<children>
+          <element xsi:type="visualInterface:Polygon" fill="true" backgroundColor="#ffff00" lineWidth="0" antialias="true" toolTip="Polygon without hairline as outline">
+	          <points x="0.0" y="0.0"/>
+	          <points x="75.0" y="75.0"/>
+	          <points x="75.0" y="0.0"/>
+	          <points x="0.0" y="75.0"/>
+          </element>
+          <position x="20.0" y="145.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Polygon"
+  fill="true"
+  backgroundColor="#ffff00"
+  lineWidth="0"
+  antialias="true">
+    <points x="0.0" y="0.0"/>
+    <points x="75.0" y="75.0"/>
+    <points x="75.0" y="0.0"/>
+    <points x="0.0" y="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="190.0" y="145.0"/>
+      	</children>
+      	
+      	<children>
+          <element xsi:type="visualInterface:Polygon" fill="true" backgroundColor="#00ff00" lineWidth="1" antialias="true" toolTip="Triangle made out of a Polygon with 1px line as outline">
+	          <points x="0.0" y="0.0"/>
+	          <points x="75.0" y="0.0"/>
+	          <points x="0.0" y="75.0"/>
+          </element>
+          <position x="20.0" y="320.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Polygon"
+  fill="true"
+  backgroundColor="#00ff00"
+  lineWidth="1"
+  antialias="true">
+    <points x="0.0" y="0.0"/>
+    <points x="75.0" y="0.0"/>
+    <points x="0.0" y="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="190.0" y="320.0"/>
+      	</children>
+      	
+      	<children>
+          <element xsi:type="visualInterface:Line" lineWidth="2" antialias="true" toolTip="Polyline (Line) with 2px width">
+	          <points x="75.0" y="0.0"/>
+	          <points x="0.0" y="75.0"/>
+	          <points x="0.0" y="0.0"/>
+	          <points x="75.0" y="75.0"/>
+          </element>
+          <position x="20.0" y="480.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Polygon"
+  lineWidth="2"
+  antialias="true">
+    <points x="75.0" y="0.0"/>
+    <points x="0.0" y="75.0"/>
+    <points x="0.0" y="0.0"/>
+    <points x="75.0" y="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="190.0" y="480.0"/>
+      	</children>
+
+      	<children>
+          <element xsi:type="visualInterface:Ellipse" fill="true" backgroundColor="#0000ff" lineWidth="3" antialias="true" toolTip="Ellipse with 3px outline">
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="540.0" y="20.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Ellipse"
+  fill="true"
+  backgroundColor="#0000ff"
+  lineWidth="3"
+  antialias="true">
+    <size width="150.0" height="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="710.0" y="20.0"/>
+      	</children>
+
+      	<children>
+          <element xsi:type="visualInterface:Ellipse" fill="true" backgroundColor="#ff00ff" lineWidth="4" antialias="true" toolTip="Circle with 4px outline">
+	          <size width="75.0" height="75.0"/>
+          </element>
+          <position x="540.0" y="145.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Ellipse"
+  fill="true"
+  backgroundColor="#ff00ff"
+  lineWidth="4"
+  antialias="true">
+    <size width="75.0" height="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="710.0" y="145.0"/>
+      	</children>
+
+      	<children>
+          <element xsi:type="visualInterface:Arc" start="45" length="180" foregroundColor="#ff8800" lineWidth="10" antialias="true" toolTip="Arc starting at 45° with a length of 180° with 10px outline">
+	          <size width="75.0" height="75.0"/>
+          </element>
+          <position x="540.0" y="320.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:Arc"
+  start="45" length="180"
+  fill="true" backgroundColor="#ff8800"
+  lineWidth="10"
+  antialias="true">
+    <size width="75.0" height="75.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="710.0" y="320.0"/>
+      	</children>
+      	
+      	<children>
+          <element xsi:type="visualInterface:RoundedRectangle" fill="true" backgroundColor="#888888" lineWidth="3" antialias="true" toolTip="RoundedRectangle without outline">
+	          <size width="150.0" height="75.0"/>
+	          <corner width="40.0" height="40.0"/>
+          </element>
+          <position x="540.0" y="480.0"/>
+      	</children>
+      	<children>
+          <element xsi:type="visualInterface:Text" fontName="monospace">
+              <text><![CDATA[<element xsi:type="visualInterface:RoundedRectangle" 
+  fill="true" 
+  backgroundColor="#888888"
+  lineWidth="-1"
+  antialias="true">
+    <size width="150.0" height="75.0"/>
+    <corner width="40.0" height="40.0"/>
+</element>]]></text>
+	          <size width="150.0" height="75.0"/>
+          </element>
+          <position x="710.0" y="480.0"/>
+      	</children>
+      </element>
+    </children>
+  </root>
+</visualInterface:Symbol>
