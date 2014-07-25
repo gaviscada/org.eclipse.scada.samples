@@ -146,6 +146,7 @@
     <jdbcProperties xmi:id="_vvE6cPxFEeOqD6E9NI_sbg" key="uri" value="jdbc:postgresql://localhost/eclipsescada"/>
     <jdbcProperties xmi:id="_xQtFQPxFEeOqD6E9NI_sbg" key="user" value="eclipsescada"/>
     <jdbcProperties xmi:id="_yS9McPxFEeOqD6E9NI_sbg" key="password" value="eclipsescada"/>
+    <jdbcProperties xmi:id="_MkCs8BPnEeS6mYcnd3ZHCQ" key="databaseName" value="eclipsescada"/>
     <postgresDriverBundles>org.openscada.external.postgresql</postgresDriverBundles>
   </applicationConfigurations>
   <configurations xmi:id="_tiJ3s-aTEeOz_d9aE-D5Rg">
