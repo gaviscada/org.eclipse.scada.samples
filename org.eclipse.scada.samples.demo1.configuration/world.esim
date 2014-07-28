@@ -147,7 +147,7 @@
     <configurations xmi:id="_tiKesOaTEeOz_d9aE-D5Rg" name="defaultMaster">
       <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeseaTEeOz_d9aE-D5Rg"/>
       <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_tiKesuaTEeOz_d9aE-D5Rg" contextId="eclipsescada"/>
-      <configurations xsi:type="osgi:EventStorageJdbc" xmi:id="_tiKes-aTEeOz_d9aE-D5Rg" archiveDays="90" cleanupPeriodSeconds="300" database="_e_FbAPt0EeO-4tLXpGArVg" maxFieldLength="4000"/>
+      <configurations xsi:type="osgi:EventStorageJdbc" xmi:id="_tiKes-aTEeOz_d9aE-D5Rg" archiveDays="90" cleanupPeriodSeconds="300" database="_j-pfwBZkEeSdaJm9Ml6jZg" maxFieldLength="4000"/>
     </configurations>
     <configurations xmi:id="_tiKeuOaTEeOz_d9aE-D5Rg" name="test">
       <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeueaTEeOz_d9aE-D5Rg" port="3"/>
@@ -165,5 +165,6 @@
       <properties xmi:id="_-fD70BZCEeSo5OeoSPCQKg" key="user" value="admin"/>
       <properties xmi:id="_-6HgIBZCEeSo5OeoSPCQKg" key="password" value="admin12"/>
     </settings>
+    <settings xsi:type="world:PostgresDatabaseSettings" xmi:id="_j-pfwBZkEeSdaJm9Ml6jZg" id="DB2" username="eclipsescada" password="eclipsescada" databaseName="eclipsescada" serverName="locahost"/>
   </configurations>
 </infrastructure:World>
