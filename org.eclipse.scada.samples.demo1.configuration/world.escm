@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:parserDriver="http://eclipse.org/SCADA/Configuration/Driver/Parser" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
+<component:ComponentWorld xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://eclipse.org/SCADA/Configuration/Component/Common" xmlns:component="http://eclipse.org/SCADA/Configuration/Component" xmlns:exec="http://eclipse.org/SCADA/Configuration/Component/Exec" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:item="http://eclipse.org/SCADA/Configuration/Item" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:parserDriver="http://eclipse.org/SCADA/Configuration/Driver/Parser" xmlns:script="http://eclipse.org/SCADA/Configuration/Script" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_xYQdQJSTEeOI_-YITJ2PnA">
   <properties xmi:id="_eWhpwODnEeOX0vgh2hIbrA" key="modbus.port" value="1502"/>
   <levels xmi:id="_1Nc3EJScEeOI_-YITJ2PnA" name="ES">
     <levels xmi:id="_2QfocJScEeOI_-YITJ2PnA" name="DEMO">
@@ -7,7 +7,7 @@
         <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
         <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
         <properties xmi:id="_0Kio8BPaEeSziI3gzDdmow" key="modbus.port" value="1502"/>
-        <settings href="world.esim#_tiKev-aTEeOz_d9aE-D5Rg"/>
+        <settings href="world.esim#_9jxYQBZCEeSo5OeoSPCQKg"/>
         <script xsi:type="script:ScriptReference" xmi:id="_DJhVMNeMEeOZFcsg_tmaVQ">
           <reference xsi:type="script:JavaScript" href="customization/modbus.js#/"/>
         </script>
@@ -134,7 +134,7 @@
         <levels xmi:id="_oJt3MPt3EeOka8VBI_XEZA" name="SQL1">
           <components xsi:type="jdbc:UpdateCommand" xmi:id="_qra-8Pt3EeOka8VBI_XEZA" name="UP1" sql="select 1">
             <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
-            <database href="world.esim#_e_FbAPt0EeO-4tLXpGArVg"/>
+            <database xsi:type="world:GenericDatabaseSettings" href="world.esim#_e_FbAPt0EeO-4tLXpGArVg"/>
             <runsOn href="world.esim#_W0rLEPuEEeO-f56CEkRkzg"/>
             <mappings xmi:id="_xJ76gPt3EeOka8VBI_XEZA" namedParameter="V1"/>
           </components>
@@ -142,7 +142,7 @@
         <levels xmi:id="_4siwUPt3EeOka8VBI_XEZA" name="SQL2">
           <components xsi:type="jdbc:QueryComponent" xmi:id="_6R9O8Pt3EeOka8VBI_XEZA" sql="select 1,2" name="Q1" period="1000" defaultDataType="INT32">
             <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
-            <database href="world.esim#_e_FbAPt0EeO-4tLXpGArVg"/>
+            <database xsi:type="world:GenericDatabaseSettings" href="world.esim#_e_FbAPt0EeO-4tLXpGArVg"/>
             <runsOn href="world.esim#_W0rLEPuEEeO-f56CEkRkzg"/>
             <mappings xmi:id="_JjwlEPt4EeOka8VBI_XEZA" name="ONE"/>
             <mappings xmi:id="_dhKVYPt9EeOI3dKoRtsWzQ" columnNumber="2" name="TWO"/>
