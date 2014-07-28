@@ -142,24 +142,12 @@
   <defaultMasterCustomizationProfile href="global/master.customization.profile.xml#/"/>
   <defaultValueArchiveCustomizationProfile href="global/hdserver.customization.profile.xml#/"/>
   <defaultDriverPassword xmi:id="_tiJ3suaTEeOz_d9aE-D5Rg" password="driver12"/>
-  <applicationConfigurations xsi:type="osgi:EventStoragePostgres" xmi:id="_nh754PxFEeOqD6E9NI_sbg" archiveDays="90" cleanupPeriodSeconds="3600" batchSize="100">
-    <jdbcProperties xmi:id="_vvE6cPxFEeOqD6E9NI_sbg" key="uri" value="jdbc:postgresql://localhost/eclipsescada"/>
-    <jdbcProperties xmi:id="_xQtFQPxFEeOqD6E9NI_sbg" key="user" value="eclipsescada"/>
-    <jdbcProperties xmi:id="_yS9McPxFEeOqD6E9NI_sbg" key="password" value="eclipsescada"/>
-    <jdbcProperties xmi:id="_MkCs8BPnEeS6mYcnd3ZHCQ" key="databaseName" value="eclipsescada"/>
-    <postgresDriverBundles>org.openscada.external.postgresql</postgresDriverBundles>
-  </applicationConfigurations>
+  <applicationConfigurations xsi:type="osgi:EventStoragePostgres" xmi:id="_nh754PxFEeOqD6E9NI_sbg" archiveDays="90" cleanupPeriodSeconds="3600" database="_e_FbAPt0EeO-4tLXpGArVg" batchSize="100"/>
   <configurations xmi:id="_tiJ3s-aTEeOz_d9aE-D5Rg">
     <configurations xmi:id="_tiKesOaTEeOz_d9aE-D5Rg" name="defaultMaster">
       <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeseaTEeOz_d9aE-D5Rg"/>
       <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_tiKesuaTEeOz_d9aE-D5Rg" contextId="eclipsescada"/>
-      <configurations xsi:type="osgi:EventStorageJdbc" xmi:id="_tiKes-aTEeOz_d9aE-D5Rg" archiveDays="90" cleanupPeriodSeconds="300" jdbcDriverName="org.postgresql.Driver" maxFieldLength="4000">
-        <jdbcProperties xmi:id="_tiKetOaTEeOz_d9aE-D5Rg" key="databaseName" value="eclipsescada"/>
-        <jdbcProperties xmi:id="_tiKeteaTEeOz_d9aE-D5Rg" key="serverName" value="localhost"/>
-        <jdbcProperties xmi:id="_tiKetuaTEeOz_d9aE-D5Rg" key="user" value="eclipsescada"/>
-        <jdbcProperties xmi:id="_tiKet-aTEeOz_d9aE-D5Rg" key="password" value="eclipsescada"/>
-        <driverBundles>org.openscada.external.postgresql</driverBundles>
-      </configurations>
+      <configurations xsi:type="osgi:EventStorageJdbc" xmi:id="_tiKes-aTEeOz_d9aE-D5Rg" archiveDays="90" cleanupPeriodSeconds="300" database="_e_FbAPt0EeO-4tLXpGArVg" maxFieldLength="4000"/>
     </configurations>
     <configurations xmi:id="_tiKeuOaTEeOz_d9aE-D5Rg" name="test">
       <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeueaTEeOz_d9aE-D5Rg" port="3"/>
@@ -170,7 +158,9 @@
       <modules xsi:type="infrastructure:WebAdminConsole" xmi:id="_tiKeveaTEeOz_d9aE-D5Rg" httpService="_tiKeu-aTEeOz_d9aE-D5Rg"/>
       <modules xsi:type="infrastructure:OracleVMSettings" xmi:id="_tiKevuaTEeOz_d9aE-D5Rg" maximumHeapSize="1024m"/>
     </configurations>
-    <settings xsi:type="world:GenericDatabaseSettings" xmi:id="_e_FbAPt0EeO-4tLXpGArVg" id="DB1" username="eclipsescada" password="eclipsescada" url="jdbc:postgresql://localhost/eclipsescada" driverName="org.postgresql.Driver"/>
+    <settings xsi:type="world:GenericDatabaseSettings" xmi:id="_e_FbAPt0EeO-4tLXpGArVg" id="DB1" username="eclipsescada" password="eclipsescada" databaseName="eclipsescada" serverName="localhost" url="jdbc:postgresql://localhost/eclipsescada" driverName="org.postgresql.Driver">
+      <bundles>org.openscada.external.postgresql</bundles>
+    </settings>
     <settings xsi:type="modbus:ModbusExporterModule" xmi:id="_9jxYQBZCEeSo5OeoSPCQKg">
       <properties xmi:id="_-fD70BZCEeSo5OeoSPCQKg" key="user" value="admin"/>
       <properties xmi:id="_-6HgIBZCEeSo5OeoSPCQKg" key="password" value="admin12"/>
