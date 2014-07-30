@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<detailView:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:detailView="http://eclipse.org/SCADA/DetailView/1.0">
+  <headerComponent xsi:type="detailView:SimpleGridComponent" cols="1">
+    <children xsi:type="detailView:TextComponent" format="Summary" descriptor="$connection$#$sumItem$"/>
+    <children xsi:type="detailView:LinkComponent" format="Data from &lt;a href=&quot;http://198.27.66.207:8081/app/#/greenhouses/simulator/$mqttSimulatorBase$&quot;>Web Simulator&lt;/a>">
+      <visibility xsi:type="detailView:ScriptVisibility" script="properties.containsKey(&quot;mqttSimulatorBase&quot;)" scriptLanguage="JavaScript"/>
+    </children>
+  </headerComponent>
+  <groups label="Overview">
+    <component xsi:type="detailView:GroupGridComponent">
+      <groups label="Data">
+        <components xsi:type="detailView:BoolLEDComponent" format="Light" descriptor="$connection$#$prefix$.LIGHT.C" onOff="true"/>
+        <components xsi:type="detailView:TextComponent" format="Temperature (°C)" descriptor="$connection$#$prefix$.TEMPERATURE.V"/>
+      </groups>
+      <groups label="Control">
+        <components xsi:type="detailView:CheckComponent" format="Control Light" descriptor="$connection$#$prefix$.LIGHT.C" readDescriptor="$connection$#$prefix$.LIGHT.C"/>
+      </groups>
+    </component>
+  </groups>
+</detailView:View>

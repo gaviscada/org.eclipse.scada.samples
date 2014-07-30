@@ -178,6 +178,18 @@
             <customizationTags>command</customizationTags>
           </components>
         </levels>
+        <levels xmi:id="_vWL8oBgNEeS7fO2lmnx7_w" name="SIM">
+          <components xsi:type="component:ExternalValue" xmi:id="_5fLl4BgNEeS7fO2lmnx7_w" name="TEMPERATURE" dataType="FLOAT" sourceName="greenhouse-sim-temperature.text">
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <customizationTags>input</customizationTags>
+            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
+          </components>
+          <components xsi:type="component:ExternalValue" xmi:id="_7StZABgNEeS7fO2lmnx7_w" name="LIGHT" dataType="BOOLEAN" sourceName="greenhouse-sim-light.text">
+            <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+            <customizationTags>command</customizationTags>
+            <connection xsi:type="parserDriver:ParserComponentHost" href="world.esim#_vs3y4BGtEeSs3Yl3m044SA"/>
+          </components>
+        </levels>
       </levels>
     </levels>
   </levels>

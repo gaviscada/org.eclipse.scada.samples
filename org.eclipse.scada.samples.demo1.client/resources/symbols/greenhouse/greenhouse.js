@@ -9,7 +9,15 @@
  *     IBH SYSTEMS GmbH - initial API and implementation
  *******************************************************************************/
 function makeHeaderProperties() {
-	// properties.put("detailsId", "org.eclipse.scada.details.greenhouse");
+	properties.put("detailsId", "org.eclipse.scada.details.greenhouse");
 	// properties.put("maintenancePrefix", maintenancePrefix());
 	properties.put("sumItem", prefixed("SUM.V"));
+	
+	var details = new java.util.HashMap ();
+	var mqttSimulatorBase = controller.getProperty ( "mqttSimulatorBase" );
+	if ( mqttSimulatorBase != null) {
+		details.put ( "mqttSimulatorBase", mqttSimulatorBase );
+	}
+	
+	properties.put ( "details", GSON.toJson ( details ) );
 }

@@ -46,6 +46,15 @@
       <position x="430.0" y="10.0"/>
       <dimension width="200.0" height="-1.0"/>
     </children>
+    <children name="greenhouse-sim">
+      <element xsi:type="visualInterface:SymbolReference" uri="../symbols/greenhouse/greenhouse.vi">
+        <properties key="title" value="Sim Greenhouse"/>
+        <properties key="prefix" value="ES.DEMO.GREENHOUSE.SIM"/>
+        <properties key="mqttSimulatorBase" value="eclipse-greenhouse-sim"/>
+      </element>
+      <position x="640.0" y="10.0"/>
+      <dimension width="200.0" height="-1.0"/>
+    </children>
   </root>
   <properties key="connection" value="connection.da.main"/>
   <properties key="hdConnection" value="connection.hd.main"/>
