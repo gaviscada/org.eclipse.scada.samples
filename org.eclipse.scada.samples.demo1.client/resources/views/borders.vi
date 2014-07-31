@@ -43,6 +43,14 @@
           <position x="240.0" y="120.0"/>
           <dimension width="200.0" height="-1.0"/>
         </children>
+        <children>
+          <element xsi:type="visualInterface:SymbolReference" uri="borderSample.vi">
+            <properties key="border" value="COMPOUND:[inner=GROUP:Name,outer=LINE:[lineWidth=2,color=#00FF00]]"/>
+            <properties key="description" value="This is compound border, with a group border and a line border"/>
+          </element>
+          <position x="10.0" y="220.0"/>
+          <dimension width="200.0" height="-1.0"/>
+        </children>
       </element>
     </children>
     <children alignment="TOP">
