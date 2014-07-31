@@ -608,12 +608,13 @@
          point="org.eclipse.scada.vi.ui.user.view">
       <viewInstance
             defaultInstance="true"
-            name="Logon"
-            zooming="false"
-            mainView="true"
-            resource="resources/views/placeholder.vi"
             factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
-            id="org.eclipse.scada.samples.demo1.client.placeholder">
+            id="org.eclipse.scada.samples.demo1.client.placeholder"
+            mainView="true"
+            name="Logon"
+            order="10"
+            resource="resources/views/placeholder.vi"
+            zooming="false">
          <visibility>
             <reference
                   definitionId="org.eclipse.scada.samples.demo1.client.nosession">
@@ -622,12 +623,13 @@
       </viewInstance>
       <viewInstance
             defaultInstance="true"
-            name="Main"
-            zooming="false"
-            mainView="true"
-            resource="resources/views/main.vi"
             factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
-            id="org.eclipse.scada.samples.demo1.client.main">
+            id="org.eclipse.scada.samples.demo1.client.main"
+            mainView="true"
+            name="Main"
+            order="10"
+            resource="resources/views/main.vi"
+            zooming="false">
          <visibility>
             <reference
                   definitionId="org.eclipse.scada.samples.demo1.client.hassession">
@@ -640,6 +642,7 @@
             id="org.eclipse.scada.samples.demo1.client.borders"
             mainView="true"
             name="Borders"
+            order="20"
             resource="resources/views/borders.vi">
       </viewInstance>
       <viewInstance
@@ -648,6 +651,7 @@
             id="org.eclipse.scada.samples.demo1.client.shapes"
             mainView="true"
             name="Shapes"
+            order="30"
             resource="resources/views/shapes.vi">
       </viewInstance>
    </extension>
