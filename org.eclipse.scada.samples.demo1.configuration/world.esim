@@ -32,7 +32,9 @@
     </deployment>
     <drivers xsi:type="infrastructure:EquinoxDriver" xmi:id="_tiJQkOaTEeOz_d9aE-D5Rg" name="arduino" driverTypeId="org.eclipse.scada.da.server.arduino" devices="_tiJQnOaTEeOz_d9aE-D5Rg" instanceNumber="8">
       <userService xsi:type="infrastructure:SystemPropertyUserService" xmi:id="_tiJQkeaTEeOz_d9aE-D5Rg">
-        <users xmi:id="_tiJQkuaTEeOz_d9aE-D5Rg" name="driver" password="driver12"/>
+        <users xmi:id="_tiJQkuaTEeOz_d9aE-D5Rg" name="driver" password="driver12">
+          <roles>INTERLINK</roles>
+        </users>
       </userService>
       <accessCredentials xsi:type="world:UsernamePasswordCredentials" xmi:id="_tiJQk-aTEeOz_d9aE-D5Rg" username="driver" password="driver12"/>
     </drivers>
@@ -71,7 +73,7 @@
         </extractors>
       </components>
       <components xmi:id="_xmWLwBMHEeSjHMvJjartLA" id="greenhouse-eclipse-temperature">
-        <input xsi:type="parser:MqttInput" xmi:id="_iD11QBMJEeS2lsu97D1sdw" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-ben/sensors/temperature" qos="2">
+        <input xsi:type="parser:MqttInput" xmi:id="_iD11QBMJEeS2lsu97D1sdw" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-ben/sensors/temperature">
           <transformers xsi:type="parser:StringTransformer" xmi:id="_-28-0BMKEeS2lsu97D1sdw"/>
         </input>
         <extractors xsi:type="parser:PlainText" xmi:id="_WKIU8BMMEeS2lsu97D1sdw">
@@ -79,13 +81,13 @@
         </extractors>
       </components>
       <components xmi:id="_osj6EBMnEeS2lsu97D1sdw" id="greenhouse-eclipse-light">
-        <input xsi:type="parser:MqttInput" xmi:id="_osj6ERMnEeS2lsu97D1sdw" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-ben/sensors/light" qos="2">
+        <input xsi:type="parser:MqttInput" xmi:id="_osj6ERMnEeS2lsu97D1sdw" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-ben/sensors/light">
           <transformers xsi:type="parser:StringTransformer" xmi:id="_osj6EhMnEeS2lsu97D1sdw"/>
         </input>
         <extractors xsi:type="parser:PlainText" xmi:id="_osj6ExMnEeS2lsu97D1sdw"/>
       </components>
       <components xmi:id="_WvJ8gBgNEeS7fO2lmnx7_w" id="greenhouse-sim-temperature">
-        <input xsi:type="parser:MqttInput" xmi:id="_WvJ8gRgNEeS7fO2lmnx7_w" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-sim/sensors/temperature" qos="2">
+        <input xsi:type="parser:MqttInput" xmi:id="_WvJ8gRgNEeS7fO2lmnx7_w" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-sim/sensors/temperature">
           <transformers xsi:type="parser:StringTransformer" xmi:id="_WvJ8ghgNEeS7fO2lmnx7_w"/>
         </input>
         <extractors xsi:type="parser:PlainText" xmi:id="_WvJ8gxgNEeS7fO2lmnx7_w">
@@ -93,7 +95,7 @@
         </extractors>
       </components>
       <components xmi:id="_WvJ8hRgNEeS7fO2lmnx7_w" id="greenhouse-sim-light">
-        <input xsi:type="parser:MqttInput" xmi:id="_WvJ8hhgNEeS7fO2lmnx7_w" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-sim/sensors/light" qos="2">
+        <input xsi:type="parser:MqttInput" xmi:id="_WvJ8hhgNEeS7fO2lmnx7_w" serverUri="tcp://iot.eclipse.org:1883" topic="javaonedemo/eclipse-greenhouse-sim/sensors/light">
           <transformers xsi:type="parser:StringTransformer" xmi:id="_WvJ8hxgNEeS7fO2lmnx7_w"/>
         </input>
         <extractors xsi:type="parser:PlainText" xmi:id="_WvJ8iBgNEeS7fO2lmnx7_w"/>
