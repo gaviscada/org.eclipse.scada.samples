@@ -33,13 +33,15 @@ if ( ( request.isAnalog () || request.isStringType () ) && request.hasTag ( "inp
 } else if ( request.isDigital () && request.hasTag ( "input" ) )
 	request.getLocalTags().add ( "M" ); // message
 
-else if ( request.isDigital () && request.hasTag ( "command" ) )
+else if ( request.isDigital () && request.hasTag ( "command" ) ) {
+	request.addFeature ( DefaultFeatures.WRITE_LOGGER ) ;
 	request.getLocalTags().add ( "C" ); // command
-
-else if ( request.isAnalog () && request.hasTag ( "output" ) )
+	
+} else if ( request.isAnalog () && request.hasTag ( "output" ) ) {
+	request.addFeature ( DefaultFeatures.WRITE_LOGGER ) ;
 	request.getLocalTags().add ( "S" ); // setpoint
 
-else if ( request.hasTag ( "summary" ) ) {
+} else if ( request.hasTag ( "summary" ) ) {
 	request.getLocalTags().removeLast ();
 	request.getLocalTags().add ( "SUM" );
 	request.getLocalTags().add ( "V" ); // value
