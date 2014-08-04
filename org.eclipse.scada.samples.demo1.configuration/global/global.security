@@ -5,9 +5,11 @@
   <rules xsi:type="security:ScriptRule" id="allow.operator.session" idFilter="operator" actionFilter="PRIV" typeFilter="SESSION" script="//@scripts.2"/>
   <rules xsi:type="security:ScriptRule" id="allow.admin.session" idFilter="admin" actionFilter="PRIV" typeFilter="SESSION" script="//@scripts.3"/>
   <rules xsi:type="security:ScriptRule" id="reject.all.session" actionFilter="PRIV" typeFilter="SESSION" script="//@scripts.1"/>
+  <rules xsi:type="security:ScriptRule" id="allow.interlink" actionFilter="PROXY_USER" typeFilter="SESSION" script="//@scripts.4"/>
   <rules xsi:type="security:ScriptRule" id="allow.all" script="//@scripts.2"/>
   <scripts xsi:type="security:GenericScript" source="true;"/>
   <scripts xsi:type="security:GenericScript" source="false;"/>
   <scripts xsi:type="security:GenericScript" source="user != null;"/>
   <scripts xsi:type="security:GenericScript" source="user != null &amp;&amp; user.hasRole ( &quot;ADMIN&quot; );"/>
+  <scripts xsi:type="security:GenericScript" source="user != null &amp;&amp; user.hasRole ( &quot;INTERLINK&quot; );"/>
 </security:Configuration>
