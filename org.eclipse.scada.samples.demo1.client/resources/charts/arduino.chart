@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chart:Chart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chart="http://eclipse.org/SCADA/UI/Chart" title="Arduino" selectedYAxis="#//@left.0" selectedXAxis="#//@bottom.0" mutable="false" timeRulerAxis="#//@bottom.0">
-  <bottom label="Time" format="HH:mm" minimum="1406757600000" maximum="1406844000000"/>
+  <bottom label="Time" format="HH:mm" minimum="1407103200000" maximum="1407189600000"/>
   <left textPadding="1" labelVisible="false" minimum="-10.0" maximum="70.0"/>
   <left textPadding="1" labelVisible="false" minimum="0.0" maximum="120.0"/>
-  <left textPadding="1" labelVisible="false" minimum="0.0" maximum="600.0"/>
+  <left textPadding="1" labelVisible="false" minimum="0.0" maximum="800.0"/>
   <inputs xsi:type="chart:ArchiveSeries" label="Temperature" x="#//@bottom.0" y="#//@left.0" ignoreFuture="true">
     <item xsi:type="chart:IdItem" itemId="ES.DEMO.ARDUINO001.TEMPERATURE.V" connectionId="connection.hd.main"/>
     <lineProperties color="#FF0000"/>

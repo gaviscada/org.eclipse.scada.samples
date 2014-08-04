@@ -10,8 +10,7 @@
       descriptor="$connection$#$sumItem$"/>
   <groups label="Overview">
     <component
-        xsi:type="detailView:GroupGridComponent"
-        cols="1">
+        xsi:type="detailView:GroupGridComponent">
       <groups
           label="Measured Data">
         <components
@@ -35,6 +34,28 @@
             hdItemId="$prefix$.HUMIDITY.V"
             hdQueryString="86400000:600000:0:100"
             descriptor="$connection$#$prefix$.HUMIDITY.V"/>
+      </groups>
+      <groups
+          label="Webcam">
+        <components
+            xsi:type="detailView:BrowserComponent"
+            url="http://muc.ibhmgt.de:8081"
+            width="640"
+            height="480"
+            reloadTimer="60000"/>
+      </groups>
+      <groups
+          label="Control">
+        <components
+            xsi:type="detailView:ButtonComponent"
+            format="Light On"
+            value="BOOLEAN#true"
+            writeDescriptor="$connection$#$prefix$.CUBE.C"/>
+        <components
+            xsi:type="detailView:ButtonComponent"
+            format="Light Off"
+            value="BOOLEAN#false"
+            writeDescriptor="$connection$#$prefix$.CUBE.C"/>
       </groups>
     </component>
   </groups>
