@@ -42,7 +42,7 @@
           <customizationTags>input</customizationTags>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
         </components>
-        <components xsi:type="component:ExternalValue" xmi:id="_7BtGYBCrEeSh5sX4S0Y-vw" name="TEMPERATURE" dataType="FLOAT" sourceName="A1.data.temperature">
+        <components xsi:type="component:ExternalValue" xmi:id="_7BtGYBCrEeSh5sX4S0Y-vw" shortDescription="Room temperature" name="TEMPERATURE" dataType="FLOAT" sourceName="A1.data.temperature">
           <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
           <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
           <customizationTags>input</customizationTags>
@@ -52,6 +52,12 @@
           <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
           <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
           <customizationTags>output</customizationTags>
+          <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
+        </components>
+        <components xsi:type="component:ExternalValue" xmi:id="_lMY_oBlhEeSW_9nxnL9BZQ" shortDescription="Cube light" name="CUBE" dataType="BOOLEAN" sourceName="A1.data.switch">
+          <masterOn href="world.esim#_tiJQmOaTEeOz_d9aE-D5Rg"/>
+          <masterOn href="world.esim#_tiIph-aTEeOz_d9aE-D5Rg"/>
+          <customizationTags>command</customizationTags>
           <connection xsi:type="infrastructure:EquinoxDriver" href="world.esim#_tiJQkOaTEeOz_d9aE-D5Rg"/>
         </components>
       </levels>
