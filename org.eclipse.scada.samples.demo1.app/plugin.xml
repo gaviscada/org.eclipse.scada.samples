@@ -117,7 +117,23 @@
          </property>
          <property
                name="aboutText"
-               value="%productBlurb">
+               value="%aboutText">
+         </property>
+         <property
+               name="aboutImage"
+               value="branding/about.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="444444">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="20,20,4345,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,0,455,15">
          </property>
       </product>
    </extension>

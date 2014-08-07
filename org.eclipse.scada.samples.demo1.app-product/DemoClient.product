@@ -20,7 +20,10 @@
    <windowImages i16="icons/app/icon_16px.png" i32="icons/app/icon_32px.png" i48="icons/app/icon_48px.png" i64="icons/app/icon_64px.png" i128="icons/app/icon_128px.png"/>
 
    <splash
-      location="org.eclipse.scada.samples.demo1.app" />
+      location="org.eclipse.scada.samples.demo1.app"
+      startupProgressRect="0,0,455,15"
+      startupMessageRect="20,20,4345,20"
+      startupForegroundColor="444444" />
    <launcher name="democlient1">
       <solaris/>
       <win useIco="false">
