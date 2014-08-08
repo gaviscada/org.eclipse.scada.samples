@@ -38,11 +38,12 @@
       <groups
           label="Webcam">
         <components
-            xsi:type="detailView:BrowserComponent"
-            url="http://muc.ibhmgt.de:8081"
+            xsi:type="detailView:URLImageComponent"
+            descriptor=""
+            fallbackImageUrl="http://pi02.intra/cgi-bin/nph-mjgrab?1"
             width="640"
             height="480"
-            reloadTimer="60000"/>
+            reloadTimer="1000"/>
       </groups>
       <groups
           label="Control">
