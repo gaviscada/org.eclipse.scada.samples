@@ -1,5 +1,12 @@
 var DefaultFeatures = Packages.org.eclipse.scada.configuration.lib.DefaultFeatures;
 
+if ( request.isComponentClass ( "DriverConnectionAnalyzer") ) {
+	if ( request.isLocalTags ( [ "STATE"] ))
+		{
+			request.addFeature ( DefaultFeatures.VALUE_LOGGER ) ;
+		}
+}
+
 if ( ( request.isAnalog () || request.isStringType () ) && request.hasTag ( "input" ) ) {
 
 	if ( request.isComponentClass ( "LoadAverage" ) ) {
