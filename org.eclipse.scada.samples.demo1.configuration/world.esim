@@ -5,7 +5,7 @@
       <dataModuleOptions xmi:id="_OVPGkAwMEeStKoZt2pg9pA"/>
       <protocolOptions xmi:id="_PjzLcAwMEeStKoZt2pg9pA"/>
     </devices>
-    <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_tiIpg-aTEeOz_d9aE-D5Rg">
+    <deployment xsi:type="deployment:RedhatDeploymentMechanism" xmi:id="_tiIpg-aTEeOz_d9aE-D5Rg" automaticCreate="true" recreateBackups="2" license="EPL">
       <changes xmi:id="_tiIphOaTEeOz_d9aE-D5Rg" date="2014-02-13T11:49:38.924+0100" description="Initial version." version="0.1.0">
         <author href="global/deployment.information.esdi#_m8TbwZSTEeOI_-YITJ2PnA"/>
       </changes>
