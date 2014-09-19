@@ -40,7 +40,7 @@
         <components
             xsi:type="detailView:URLImageComponent"
             descriptor=""
-            fallbackImageUrl="http://pi02.intra/cgi-bin/nph-mjgrab?1"
+            fallbackImageUrl="http://muc.ibhmgt.de:8080/cgi-bin/nph-mjgrab?1"
             width="640"
             height="480"
             reloadTimer="1000"/>
