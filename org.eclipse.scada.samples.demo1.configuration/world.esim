@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://eclipe.org/SCADA/Configuration/Arduino" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:iec60870="http://eclipse.org/SCADA/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:parser="http://eclipse.org/SCADA/DA/Server/Parser" xmlns:parserDriver="http://eclipse.org/SCADA/Configuration/Driver/Parser" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_tiIpgOaTEeOz_d9aE-D5Rg">
+<infrastructure:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://eclipe.org/SCADA/Configuration/Arduino" xmlns:deployment="http://eclipse.org/SCADA/Configuration/World/Deployment" xmlns:iec60870="http://openscada.org/Configuration/IEC60870" xmlns:infrastructure="http://eclipse.org/SCADA/Configuration/Infrastructure" xmlns:jdbc="http://eclipse.org/SCADA/Configuration/Driver/JDBC" xmlns:modbus="http://eclipse.org/SCADA/Configuration/Modbus" xmlns:osgi="http://eclipse.org/SCADA/Configuration/World/OSGi" xmlns:parser="http://eclipse.org/SCADA/DA/Server/Parser" xmlns:parserDriver="http://eclipse.org/SCADA/Configuration/Driver/Parser" xmlns:world="http://eclipse.org/SCADA/Configuration/World" xmi:id="_tiIpgOaTEeOz_d9aE-D5Rg">
   <nodes xsi:type="infrastructure:SystemNode" xmi:id="_tiIpguaTEeOz_d9aE-D5Rg" hostName="demo.openscada.org">
     <devices xsi:type="iec60870:IEC60870Device" xmi:id="_M6QWUAwMEeStKoZt2pg9pA" name="iec1">
       <dataModuleOptions xmi:id="_OVPGkAwMEeStKoZt2pg9pA"/>
@@ -16,7 +16,7 @@
     </deployment>
     <drivers xsi:type="infrastructure:CommonDriver" xmi:id="_tiIpheaTEeOz_d9aE-D5Rg" name="exec" driverTypeId="org.eclipse.scada.da.server.exec" portNumber="2107"/>
     <valueArchives xmi:id="_tiIphuaTEeOz_d9aE-D5Rg" name="hdserver" instanceNumber="2"/>
-    <masters xmi:id="_tiIph-aTEeOz_d9aE-D5Rg" name="master" driver="_tiIpheaTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiJQl-aTEeOz_d9aE-D5Rg _vs3y4BGtEeSs3Yl3m044SA" archiveTo="_tiIphuaTEeOz_d9aE-D5Rg">
+    <masters xmi:id="_tiIph-aTEeOz_d9aE-D5Rg" name="master" configuration="_tiKesOaTEeOz_d9aE-D5Rg" driver="_tiIpheaTEeOz_d9aE-D5Rg _tiJQkOaTEeOz_d9aE-D5Rg _tiJQl-aTEeOz_d9aE-D5Rg _vs3y4BGtEeSs3Yl3m044SA" archiveTo="_tiIphuaTEeOz_d9aE-D5Rg">
       <authoratives xmi:id="_tiIpiOaTEeOz_d9aE-D5Rg">
         <hierarchy>ES</hierarchy>
         <hierarchy>DEMO</hierarchy>
@@ -165,6 +165,7 @@
     <configurations xmi:id="_tiKesOaTEeOz_d9aE-D5Rg" name="defaultMaster">
       <modules xsi:type="infrastructure:HttpServiceModule" xmi:id="_tiKeseaTEeOz_d9aE-D5Rg"/>
       <modules xsi:type="infrastructure:RestExporterModule" xmi:id="_tiKesuaTEeOz_d9aE-D5Rg" contextId="eclipsescada"/>
+      <modules xsi:type="infrastructure:EventInjectorSyslog" xmi:id="_cJgQoC6bEeSfEdtdwCW_Dg"/>
       <configurations xsi:type="osgi:EventStorageJdbc" xmi:id="_tiKes-aTEeOz_d9aE-D5Rg" archiveDays="90" cleanupPeriodSeconds="300" database="_j-pfwBZkEeSdaJm9Ml6jZg" maxFieldLength="4000"/>
     </configurations>
     <configurations xmi:id="_tiKeuOaTEeOz_d9aE-D5Rg" name="test">
